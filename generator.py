@@ -1,7 +1,7 @@
 from datetime import datetime
-from config import NAMES_PATH
+from config import *
 import json
-from random import choice
+from random import choice, randint
 
 from route_time import RouteTime
 from train_data import TrainData
@@ -17,22 +17,34 @@ class RowGenerator:
         cur_surname = str()
         cur_patronymic = str()
 
-        with open(NAMES_PATH + f"ru_names_{cur_sex}.json", encoding = 'utf-8') as file:
+        with open(NAMES_PATH + NAMES_FILES[cur_sex]["names"], encoding = 'utf-8') as file:
             names = json.load(file)
             cur_name = choice(names)
 
-        with open(NAMES_PATH + f"ru_surnames_{cur_sex}.json", encoding = 'utf-8') as file:
+        with open(NAMES_PATH + NAMES_FILES[cur_sex]["surnames"], encoding = 'utf-8') as file:
             surnames = json.load(file)
             cur_surname = choice(surnames)
 
-        with open(NAMES_PATH + f"ru_patronymic_{cur_sex}.json", encoding = 'utf-8') as file:
+        with open(NAMES_PATH + NAMES_FILES[cur_sex]["patronymics"], encoding = 'utf-8') as file:
             patronymics = json.load(file)
             cur_patronymic = choice(patronymics)
         
         return f"{cur_surname} {cur_name} {cur_patronymic}"
 
+
     def __generate_passport(self) -> str:
-        raise NotImplementedError
+        with open(PASSPORT_FILE, encoding = 'utf-8') as file:
+            region_numbers = json.load(file)
+            region_number = choice(region_numbers)
+           
+            passport_blank_year = choice([year for year in range(PASSPORT_YEAR_RANGE[0], PASSPORT_YEAR_RANGE[1]+1)])
+            passport_blank_year = str(passport_blank_year)[2:]
+            
+            passport_blank_number = randint(100_000, 999_999)
+            
+            passport_number = f"{region_number}{passport_blank_year} {passport_blank_number}"
+            return passport_number
+
 
     def __generate_route(self) -> Route:
         raise NotImplementedError
@@ -61,8 +73,8 @@ class RowGenerator:
 
 
         self.cur_row.name = self.__generate_name()
+        self.cur_row.passport_number = self.__generate_passport()
 
-        self.cur_row.passport_number = "1234 123456"
         self.cur_row.route = Route("Санкт-Петербург", "Москва", 600)
         self.cur_row.route_time = rt
         self.cur_row.train_data = tr
