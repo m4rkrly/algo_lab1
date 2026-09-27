@@ -26,7 +26,6 @@ class CardGenerator:
 
     def generate_card(self, dh: DataHolder) -> str:
         chosen_bank = choices(dh.BANKS, weights = self._weights, k=1)[0]
-        print(chosen_bank)
         chosen_bic = choice(dh.BICS[chosen_bank])
 
         card_user_number = str(randint(1, 999_999_999))

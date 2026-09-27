@@ -17,8 +17,8 @@ class Row:
         return (
                 self.name,
                 self.passport_number,
-                self.route.city_from,
-                self.route.city_to,
+                self.route.departure_city,
+                self.route.arrival_city,
                 self.route_time.departure_time,
                 self.route_time.arrival_time,
                 self.train_data.train_number,

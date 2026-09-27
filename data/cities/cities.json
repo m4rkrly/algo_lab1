@@ -1,6 +1,7 @@
 [
   {
     "city": "Moscow",
+    "ru_name": "Москва",
     "lat": "55.7506",
     "lng": "37.6175",
     "country": "Russia",
@@ -12,6 +13,7 @@
   },
   {
     "city": "Saint Petersburg",
+    "ru_name": "Санкт-Петербург",
     "lat": "59.9500",
     "lng": "30.3167",
     "country": "Russia",
@@ -23,6 +25,7 @@
   },
   {
     "city": "Novosibirsk",
+    "ru_name": "Новосибирск",
     "lat": "55.0333",
     "lng": "82.9167",
     "country": "Russia",
@@ -34,6 +37,7 @@
   },
   {
     "city": "Yekaterinburg",
+    "ru_name": "Екатеринбург",
     "lat": "56.8356",
     "lng": "60.6128",
     "country": "Russia",
@@ -45,6 +49,7 @@
   },
   {
     "city": "Kazan",
+    "ru_name": "Казань",
     "lat": "55.7908",
     "lng": "49.1144",
     "country": "Russia",
@@ -56,6 +61,7 @@
   },
   {
     "city": "Nizhniy Novgorod",
+    "ru_name": "Нижний Новгород",
     "lat": "56.3269",
     "lng": "44.0075",
     "country": "Russia",
@@ -67,6 +73,7 @@
   },
   {
     "city": "Chelyabinsk",
+    "ru_name": "Челябинск",
     "lat": "55.1500",
     "lng": "61.4000",
     "country": "Russia",
@@ -78,6 +85,7 @@
   },
   {
     "city": "Krasnodar",
+    "ru_name": "Краснодар",
     "lat": "45.0333",
     "lng": "38.9833",
     "country": "Russia",
@@ -89,6 +97,7 @@
   },
   {
     "city": "Samara",
+    "ru_name": "Самара",
     "lat": "53.1833",
     "lng": "50.1167",
     "country": "Russia",
@@ -100,6 +109,7 @@
   },
   {
     "city": "Ufa",
+    "ru_name": "Уфа",
     "lat": "54.7261",
     "lng": "55.9475",
     "country": "Russia",
@@ -111,6 +121,7 @@
   },
   {
     "city": "Rostov",
+    "ru_name": "Ростов-на-Дону",
     "lat": "47.2225",
     "lng": "39.7100",
     "country": "Russia",
@@ -122,6 +133,7 @@
   },
   {
     "city": "Omsk",
+    "ru_name": "Омск",
     "lat": "54.9667",
     "lng": "73.3833",
     "country": "Russia",
@@ -133,6 +145,7 @@
   },
   {
     "city": "Krasnoyarsk",
+    "ru_name": "Красноярск",
     "lat": "56.0089",
     "lng": "92.8719",
     "country": "Russia",
@@ -144,6 +157,7 @@
   },
   {
     "city": "Voronezh",
+    "ru_name": "Воронеж",
     "lat": "51.6717",
     "lng": "39.2106",
     "country": "Russia",
@@ -155,6 +169,7 @@
   },
   {
     "city": "Perm",
+    "ru_name": "Пермь",
     "lat": "58.0139",
     "lng": "56.2489",
     "country": "Russia",
@@ -166,6 +181,7 @@
   },
   {
     "city": "Volgograd",
+    "ru_name": "Волгоград",
     "lat": "48.7086",
     "lng": "44.5147",
     "country": "Russia",
@@ -177,6 +193,7 @@
   },
   {
     "city": "Tyumen",
+    "ru_name": "Тюмень",
     "lat": "57.1500",
     "lng": "65.5333",
     "country": "Russia",
@@ -188,6 +205,7 @@
   },
   {
     "city": "Saratov",
+    "ru_name": "Саратов",
     "lat": "51.5300",
     "lng": "46.0350",
     "country": "Russia",
@@ -199,6 +217,7 @@
   },
   {
     "city": "Tolyatti",
+    "ru_name": "Тольятти",
     "lat": "53.5167",
     "lng": "49.4167",
     "country": "Russia",
@@ -210,6 +229,7 @@
   },
   {
     "city": "Makhachkala",
+    "ru_name": "Махачкала",
     "lat": "42.9825",
     "lng": "47.5050",
     "country": "Russia",
@@ -221,6 +241,7 @@
   },
   {
     "city": "Barnaul",
+    "ru_name": "Барнаул",
     "lat": "53.3567",
     "lng": "83.7872",
     "country": "Russia",
@@ -232,6 +253,7 @@
   },
   {
     "city": "Izhevsk",
+    "ru_name": "Ижевск",
     "lat": "56.8500",
     "lng": "53.2167",
     "country": "Russia",
@@ -243,6 +265,7 @@
   },
   {
     "city": "Khabarovsk",
+    "ru_name": "Хабаровск",
     "lat": "48.4833",
     "lng": "135.0667",
     "country": "Russia",
@@ -254,6 +277,7 @@
   },
   {
     "city": "Ulyanovsk",
+    "ru_name": "Ульяновск",
     "lat": "54.3167",
     "lng": "48.3667",
     "country": "Russia",
@@ -265,6 +289,7 @@
   },
   {
     "city": "Irkutsk",
+    "ru_name": "Иркутск",
     "lat": "52.2892",
     "lng": "104.2800",
     "country": "Russia",
@@ -276,6 +301,7 @@
   },
   {
     "city": "Vladivostok",
+    "ru_name": "Владивосток",
     "lat": "43.1150",
     "lng": "131.8853",
     "country": "Russia",
@@ -287,6 +313,7 @@
   },
   {
     "city": "Yaroslavl",
+    "ru_name": "Ярославль",
     "lat": "57.6264",
     "lng": "39.8933",
     "country": "Russia",
@@ -298,6 +325,7 @@
   },
   {
     "city": "Naberezhnyye Chelny",
+    "ru_name": "Набережные Челны",
     "lat": "55.7149",
     "lng": "52.3697",
     "country": "Russia",
@@ -309,6 +337,7 @@
   },
   {
     "city": "Tomsk",
+    "ru_name": "Томск",
     "lat": "56.4886",
     "lng": "84.9522",
     "country": "Russia",
@@ -320,6 +349,7 @@
   },
   {
     "city": "Kemerovo",
+    "ru_name": "Кемерово",
     "lat": "55.3333",
     "lng": "86.0667",
     "country": "Russia",
@@ -331,6 +361,7 @@
   },
   {
     "city": "Orenburg",
+    "ru_name": "Оренбург",
     "lat": "51.7667",
     "lng": "55.1000",
     "country": "Russia",
@@ -342,6 +373,7 @@
   },
   {
     "city": "Balashikha",
+    "ru_name": "Балашиха",
     "lat": "55.8000",
     "lng": "37.9500",
     "country": "Russia",
@@ -353,6 +385,7 @@
   },
   {
     "city": "Novokuznetsk",
+    "ru_name": "Новокузнецк",
     "lat": "53.7500",
     "lng": "87.1167",
     "country": "Russia",
@@ -364,6 +397,7 @@
   },
   {
     "city": "Ryazan",
+    "ru_name": "Рязань",
     "lat": "54.6300",
     "lng": "39.7425",
     "country": "Russia",
@@ -375,6 +409,7 @@
   },
   {
     "city": "Cheboksary",
+    "ru_name": "Чебоксары",
     "lat": "56.1333",
     "lng": "47.2500",
     "country": "Russia",
@@ -386,6 +421,7 @@
   },
   {
     "city": "Kaliningrad",
+    "ru_name": "Калининград",
     "lat": "54.7167",
     "lng": "20.5000",
     "country": "Russia",
@@ -397,6 +433,7 @@
   },
   {
     "city": "Penza",
+    "ru_name": "Пенза",
     "lat": "53.2000",
     "lng": "45.0000",
     "country": "Russia",
@@ -408,6 +445,7 @@
   },
   {
     "city": "Lipetsk",
+    "ru_name": "Липецк",
     "lat": "52.6167",
     "lng": "39.6000",
     "country": "Russia",
@@ -419,6 +457,7 @@
   },
   {
     "city": "Kirov",
+    "ru_name": "Киров",
     "lat": "58.6000",
     "lng": "49.6500",
     "country": "Russia",
@@ -430,6 +469,7 @@
   },
   {
     "city": "Tula",
+    "ru_name": "Тула",
     "lat": "54.2000",
     "lng": "37.6167",
     "country": "Russia",
@@ -441,6 +481,7 @@
   },
   {
     "city": "Astrakhan",
+    "ru_name": "Астрахань",
     "lat": "46.3500",
     "lng": "48.0350",
     "country": "Russia",
@@ -452,6 +493,7 @@
   },
   {
     "city": "Stavropol",
+    "ru_name": "Ставрополь",
     "lat": "45.0500",
     "lng": "41.9833",
     "country": "Russia",
@@ -463,6 +505,7 @@
   },
   {
     "city": "Sochi",
+    "ru_name": "Сочи",
     "lat": "43.5853",
     "lng": "39.7203",
     "country": "Russia",
@@ -474,6 +517,7 @@
   },
   {
     "city": "Ulan-Ude",
+    "ru_name": "Улан-Удэ",
     "lat": "51.8272",
     "lng": "107.6064",
     "country": "Russia",
@@ -485,6 +529,7 @@
   },
   {
     "city": "Kursk",
+    "ru_name": "Курск",
     "lat": "51.7372",
     "lng": "36.1872",
     "country": "Russia",
@@ -496,6 +541,7 @@
   },
   {
     "city": "Surgut",
+    "ru_name": "Сургут",
     "lat": "61.2500",
     "lng": "73.4333",
     "country": "Russia",
@@ -507,6 +553,7 @@
   },
   {
     "city": "Tver",
+    "ru_name": "Тверь",
     "lat": "56.8578",
     "lng": "35.9219",
     "country": "Russia",
@@ -518,6 +565,7 @@
   },
   {
     "city": "Magnitogorsk",
+    "ru_name": "Магнитогорск",
     "lat": "53.3833",
     "lng": "59.0333",
     "country": "Russia",
@@ -529,6 +577,7 @@
   },
   {
     "city": "Bryansk",
+    "ru_name": "Брянск",
     "lat": "53.2425",
     "lng": "34.3667",
     "country": "Russia",
@@ -540,6 +589,7 @@
   },
   {
     "city": "Ivanovo",
+    "ru_name": "Иваново",
     "lat": "57.0000",
     "lng": "41.0000",
     "country": "Russia",
@@ -551,6 +601,7 @@
   },
   {
     "city": "Vladimir",
+    "ru_name": "Владимир",
     "lat": "56.1286",
     "lng": "40.4058",
     "country": "Russia",
@@ -562,6 +613,7 @@
   },
   {
     "city": "Chita",
+    "ru_name": "Чита",
     "lat": "52.0334",
     "lng": "113.5009",
     "country": "Russia",
@@ -573,6 +625,7 @@
   },
   {
     "city": "Kaluga",
+    "ru_name": "Калуга",
     "lat": "54.5333",
     "lng": "36.2667",
     "country": "Russia",
@@ -584,6 +637,7 @@
   },
   {
     "city": "Nizhniy Tagil",
+    "ru_name": "Нижний Тагил",
     "lat": "57.9167",
     "lng": "59.9667",
     "country": "Russia",
@@ -595,6 +649,7 @@
   },
   {
     "city": "Belgorod",
+    "ru_name": "Белгород",
     "lat": "50.6000",
     "lng": "36.6000",
     "country": "Russia",
@@ -606,6 +661,7 @@
   },
   {
     "city": "Volzhskiy",
+    "ru_name": "Волжский",
     "lat": "48.7833",
     "lng": "44.7667",
     "country": "Russia",
@@ -617,6 +673,7 @@
   },
   {
     "city": "Podolsk",
+    "ru_name": "Подольск",
     "lat": "55.4311",
     "lng": "37.5456",
     "country": "Russia",
@@ -628,6 +685,7 @@
   },
   {
     "city": "Yakutsk",
+    "ru_name": "Якутск",
     "lat": "62.0272",
     "lng": "129.7319",
     "country": "Russia",
@@ -639,6 +697,7 @@
   },
   {
     "city": "Vologda",
+    "ru_name": "Вологда",
     "lat": "59.2167",
     "lng": "39.9000",
     "country": "Russia",
@@ -650,6 +709,7 @@
   },
   {
     "city": "Saransk",
+    "ru_name": "Саранск",
     "lat": "54.1833",
     "lng": "45.1833",
     "country": "Russia",
@@ -661,6 +721,7 @@
   },
   {
     "city": "Smolensk",
+    "ru_name": "Смоленск",
     "lat": "54.7828",
     "lng": "32.0453",
     "country": "Russia",
@@ -672,6 +733,7 @@
   },
   {
     "city": "Orël",
+    "ru_name": "Орёл",
     "lat": "52.9686",
     "lng": "36.0694",
     "country": "Russia",
@@ -683,6 +745,7 @@
   },
   {
     "city": "Vladikavkaz",
+    "ru_name": "Владикавказ",
     "lat": "43.0400",
     "lng": "44.6775",
     "country": "Russia",
@@ -694,6 +757,7 @@
   },
   {
     "city": "Kurgan",
+    "ru_name": "Курган",
     "lat": "55.4408",
     "lng": "65.3411",
     "country": "Russia",
@@ -705,6 +769,7 @@
   },
   {
     "city": "Cherepovets",
+    "ru_name": "Череповец",
     "lat": "59.1333",
     "lng": "37.9167",
     "country": "Russia",
@@ -716,6 +781,7 @@
   },
   {
     "city": "Arkhangelsk",
+    "ru_name": "Архангельск",
     "lat": "64.5431",
     "lng": "40.5375",
     "country": "Russia",
@@ -727,6 +793,7 @@
   },
   {
     "city": "Groznyy",
+    "ru_name": "Грозный",
     "lat": "43.3125",
     "lng": "45.6986",
     "country": "Russia",
@@ -738,6 +805,7 @@
   },
   {
     "city": "Yoshkar-Ola",
+    "ru_name": "Йошкар-Ола",
     "lat": "56.6328",
     "lng": "47.8958",
     "country": "Russia",
@@ -749,6 +817,7 @@
   },
   {
     "city": "Nizhnevartovsk",
+    "ru_name": "Нижневартовск",
     "lat": "60.9389",
     "lng": "76.5950",
     "country": "Russia",
@@ -760,6 +829,7 @@
   },
   {
     "city": "Petrozavodsk",
+    "ru_name": "Петрозаводск",
     "lat": "61.7833",
     "lng": "34.3500",
     "country": "Russia",
@@ -771,6 +841,7 @@
   },
   {
     "city": "Sterlitamak",
+    "ru_name": "Стерлитамак",
     "lat": "53.6333",
     "lng": "55.9500",
     "country": "Russia",
@@ -782,6 +853,7 @@
   },
   {
     "city": "Mytishchi",
+    "ru_name": "Мытищи",
     "lat": "55.9167",
     "lng": "37.7333",
     "country": "Russia",
@@ -793,6 +865,7 @@
   },
   {
     "city": "Kostroma",
+    "ru_name": "Кострома",
     "lat": "57.7681",
     "lng": "40.9269",
     "country": "Russia",
@@ -804,6 +877,7 @@
   },
   {
     "city": "Murmansk",
+    "ru_name": "Мурманск",
     "lat": "68.9667",
     "lng": "33.0833",
     "country": "Russia",
@@ -815,6 +889,7 @@
   },
   {
     "city": "Novorossiysk",
+    "ru_name": "Новороссийск",
     "lat": "44.7167",
     "lng": "37.7667",
     "country": "Russia",
@@ -826,6 +901,7 @@
   },
   {
     "city": "Engels",
+    "ru_name": "Энгельс",
     "lat": "51.4667",
     "lng": "46.1167",
     "country": "Russia",
@@ -837,6 +913,7 @@
   },
   {
     "city": "Khimki",
+    "ru_name": "Химки",
     "lat": "55.8892",
     "lng": "37.4450",
     "country": "Russia",
@@ -848,6 +925,7 @@
   },
   {
     "city": "Tambov",
+    "ru_name": "Тамбов",
     "lat": "52.7231",
     "lng": "41.4539",
     "country": "Russia",
@@ -859,6 +937,7 @@
   },
   {
     "city": "Nalchik",
+    "ru_name": "Нальчик",
     "lat": "43.4833",
     "lng": "43.6167",
     "country": "Russia",
@@ -870,6 +949,7 @@
   },
   {
     "city": "Syktyvkar",
+    "ru_name": "Сыктывкар",
     "lat": "61.6667",
     "lng": "50.8167",
     "country": "Russia",
@@ -881,6 +961,7 @@
   },
   {
     "city": "Nizhnekamsk",
+    "ru_name": "Нижнекамск",
     "lat": "55.6333",
     "lng": "51.8167",
     "country": "Russia",
@@ -892,6 +973,7 @@
   },
   {
     "city": "Taganrog",
+    "ru_name": "Таганрог",
     "lat": "47.2333",
     "lng": "38.9000",
     "country": "Russia",
@@ -903,6 +985,7 @@
   },
   {
     "city": "Blagoveshchensk",
+    "ru_name": "Благовещенск",
     "lat": "50.2578",
     "lng": "127.5364",
     "country": "Russia",
@@ -914,6 +997,7 @@
   },
   {
     "city": "Lyubertsy",
+    "ru_name": "Люберцы",
     "lat": "55.6783",
     "lng": "37.8944",
     "country": "Russia",
@@ -925,6 +1009,7 @@
   },
   {
     "city": "Komsomol’sk-na-Amure",
+    "ru_name": "Комсомольск-на-Амуре",
     "lat": "50.5500",
     "lng": "137.0000",
     "country": "Russia",
@@ -936,6 +1021,7 @@
   },
   {
     "city": "Korolëv",
+    "ru_name": "Королёв",
     "lat": "55.9167",
     "lng": "37.8167",
     "country": "Russia",
@@ -947,6 +1033,7 @@
   },
   {
     "city": "Velikiy Novgorod",
+    "ru_name": "Великий Новгород",
     "lat": "58.5210",
     "lng": "31.2758",
     "country": "Russia",
@@ -958,6 +1045,7 @@
   },
   {
     "city": "Bratsk",
+    "ru_name": "Братск",
     "lat": "56.1520",
     "lng": "101.6330",
     "country": "Russia",
@@ -969,6 +1057,7 @@
   },
   {
     "city": "Shakhty",
+    "ru_name": "Шахты",
     "lat": "47.7000",
     "lng": "40.2333",
     "country": "Russia",
@@ -980,6 +1069,7 @@
   },
   {
     "city": "Angarsk",
+    "ru_name": "Ангарск",
     "lat": "52.5667",
     "lng": "103.9167",
     "country": "Russia",
@@ -991,6 +1081,7 @@
   },
   {
     "city": "Staryy Oskol",
+    "ru_name": "Старый Оскол",
     "lat": "51.2981",
     "lng": "37.8350",
     "country": "Russia",
@@ -1002,6 +1093,7 @@
   },
   {
     "city": "Dzerzhinsk",
+    "ru_name": "Дзержинск",
     "lat": "56.2333",
     "lng": "43.4500",
     "country": "Russia",
@@ -1013,6 +1105,7 @@
   },
   {
     "city": "Krasnogorsk",
+    "ru_name": "Красногорск",
     "lat": "55.8217",
     "lng": "37.3386",
     "country": "Russia",
@@ -1024,6 +1117,7 @@
   },
   {
     "city": "Pskov",
+    "ru_name": "Псков",
     "lat": "57.8167",
     "lng": "28.3333",
     "country": "Russia",
@@ -1035,6 +1129,7 @@
   },
   {
     "city": "Orsk",
+    "ru_name": "Орск",
     "lat": "51.2290",
     "lng": "58.4681",
     "country": "Russia",
@@ -1046,6 +1141,7 @@
   },
   {
     "city": "Armavir",
+    "ru_name": "Армавир",
     "lat": "45.0000",
     "lng": "41.1167",
     "country": "Russia",
@@ -1057,6 +1153,7 @@
   },
   {
     "city": "Abakan",
+    "ru_name": "Абакан",
     "lat": "53.7167",
     "lng": "91.4167",
     "country": "Russia",
@@ -1068,6 +1165,7 @@
   },
   {
     "city": "Yuzhno-Sakhalinsk",
+    "ru_name": "Южно-Сахалинск",
     "lat": "46.9500",
     "lng": "142.7333",
     "country": "Russia",
@@ -1079,6 +1177,7 @@
   },
   {
     "city": "Balakovo",
+    "ru_name": "Балаково",
     "lat": "52.0390",
     "lng": "47.7839",
     "country": "Russia",
@@ -1090,6 +1189,7 @@
   },
   {
     "city": "Biysk",
+    "ru_name": "Бийск",
     "lat": "52.5167",
     "lng": "85.1667",
     "country": "Russia",
@@ -1101,6 +1201,7 @@
   },
   {
     "city": "Ussuriysk",
+    "ru_name": "Уссурийск",
     "lat": "43.8000",
     "lng": "131.9500",
     "country": "Russia",
@@ -1112,6 +1213,7 @@
   },
   {
     "city": "Norilsk",
+    "ru_name": "Норильск",
     "lat": "69.3333",
     "lng": "88.2167",
     "country": "Russia",
@@ -1123,6 +1225,7 @@
   },
   {
     "city": "Prokopyevsk",
+    "ru_name": "Прокопьевск",
     "lat": "53.8833",
     "lng": "86.7167",
     "country": "Russia",
@@ -1134,6 +1237,7 @@
   },
   {
     "city": "Rybinsk",
+    "ru_name": "Рыбинск",
     "lat": "58.0500",
     "lng": "38.8333",
     "country": "Russia",
@@ -1145,6 +1249,7 @@
   },
   {
     "city": "Almetyevsk",
+    "ru_name": "Альметьевск",
     "lat": "54.9000",
     "lng": "52.3000",
     "country": "Russia",
@@ -1156,6 +1261,7 @@
   },
   {
     "city": "Petropavlovsk-Kamchatskiy",
+    "ru_name": "Петропавловск-Камчатский",
     "lat": "53.0167",
     "lng": "158.6500",
     "country": "Russia",
@@ -1167,6 +1273,7 @@
   },
   {
     "city": "Volgodonsk",
+    "ru_name": "Волгодонск",
     "lat": "47.5167",
     "lng": "42.1500",
     "country": "Russia",
@@ -1178,6 +1285,7 @@
   },
   {
     "city": "Novocherkassk",
+    "ru_name": "Новочеркасск",
     "lat": "47.4222",
     "lng": "40.0939",
     "country": "Russia",
@@ -1189,6 +1297,7 @@
   },
   {
     "city": "Kamensk-Ural’skiy",
+    "ru_name": "Каменск-Уральский",
     "lat": "56.4000",
     "lng": "61.9333",
     "country": "Russia",
@@ -1200,6 +1309,7 @@
   },
   {
     "city": "Syzran",
+    "ru_name": "Сызрань",
     "lat": "53.1667",
     "lng": "48.4667",
     "country": "Russia",
@@ -1211,6 +1321,7 @@
   },
   {
     "city": "Zlatoust",
+    "ru_name": "Златоуст",
     "lat": "55.1667",
     "lng": "59.6667",
     "country": "Russia",
@@ -1222,6 +1333,7 @@
   },
   {
     "city": "Domodedovo",
+    "ru_name": "Домодедово",
     "lat": "55.4333",
     "lng": "37.7500",
     "country": "Russia",
@@ -1233,6 +1345,7 @@
   },
   {
     "city": "Severodvinsk",
+    "ru_name": "Северодвинск",
     "lat": "64.5667",
     "lng": "39.8500",
     "country": "Russia",
@@ -1244,6 +1357,7 @@
   },
   {
     "city": "Khasavyurt",
+    "ru_name": "Хасавюрт",
     "lat": "43.2500",
     "lng": "46.5833",
     "country": "Russia",
@@ -1255,6 +1369,7 @@
   },
   {
     "city": "Orekhovo-Borisovo Yuzhnoye",
+    "ru_name": "Орехово-Борисово Южное",
     "lat": "55.6031",
     "lng": "37.7331",
     "country": "Russia",
@@ -1266,6 +1381,7 @@
   },
   {
     "city": "Odintsovo",
+    "ru_name": "Одинцово",
     "lat": "55.6733",
     "lng": "37.2733",
     "country": "Russia",
@@ -1277,6 +1393,7 @@
   },
   {
     "city": "Miass",
+    "ru_name": "Миасс",
     "lat": "55.0500",
     "lng": "60.1000",
     "country": "Russia",
@@ -1288,6 +1405,7 @@
   },
   {
     "city": "Salavat",
+    "ru_name": "Салават",
     "lat": "53.3667",
     "lng": "55.9333",
     "country": "Russia",
@@ -1299,6 +1417,7 @@
   },
   {
     "city": "Kolpino",
+    "ru_name": "Колпино",
     "lat": "59.7583",
     "lng": "30.6000",
     "country": "Russia",
@@ -1310,6 +1429,7 @@
   },
   {
     "city": "Kopeysk",
+    "ru_name": "Копейск",
     "lat": "55.1000",
     "lng": "61.6167",
     "country": "Russia",
@@ -1321,6 +1441,7 @@
   },
   {
     "city": "Pyatigorsk",
+    "ru_name": "Пятигорск",
     "lat": "44.0333",
     "lng": "43.0500",
     "country": "Russia",
@@ -1332,6 +1453,7 @@
   },
   {
     "city": "Elektrostal",
+    "ru_name": "Электросталь",
     "lat": "55.8000",
     "lng": "38.4500",
     "country": "Russia",
@@ -1343,6 +1465,7 @@
   },
   {
     "city": "Maykop",
+    "ru_name": "Майкоп",
     "lat": "44.6000",
     "lng": "40.0833",
     "country": "Russia",
@@ -1354,6 +1477,7 @@
   },
   {
     "city": "Shchelkovo",
+    "ru_name": "Щёлково",
     "lat": "55.9167",
     "lng": "38.0000",
     "country": "Russia",
@@ -1365,6 +1489,7 @@
   },
   {
     "city": "Neftekamsk",
+    "ru_name": "Нефтекамск",
     "lat": "56.0833",
     "lng": "54.2500",
     "country": "Russia",
@@ -1376,6 +1501,7 @@
   },
   {
     "city": "Nakhodka",
+    "ru_name": "Находка",
     "lat": "42.8167",
     "lng": "132.8833",
     "country": "Russia",
@@ -1387,6 +1513,7 @@
   },
   {
     "city": "Serpukhov",
+    "ru_name": "Серпухов",
     "lat": "54.9167",
     "lng": "37.4000",
     "country": "Russia",
@@ -1398,6 +1525,7 @@
   },
   {
     "city": "Berezniki",
+    "ru_name": "Березники",
     "lat": "59.4167",
     "lng": "56.7833",
     "country": "Russia",
@@ -1409,6 +1537,7 @@
   },
   {
     "city": "Obninsk",
+    "ru_name": "Обнинск",
     "lat": "55.1000",
     "lng": "36.6167",
     "country": "Russia",
@@ -1420,6 +1549,7 @@
   },
   {
     "city": "Kolomna",
+    "ru_name": "Коломна",
     "lat": "55.0833",
     "lng": "38.7833",
     "country": "Russia",
@@ -1431,6 +1561,7 @@
   },
   {
     "city": "Kyzyl",
+    "ru_name": "Кызыл",
     "lat": "51.7167",
     "lng": "94.4500",
     "country": "Russia",
@@ -1442,6 +1573,7 @@
   },
   {
     "city": "Kaspiysk",
+    "ru_name": "Каспийск",
     "lat": "42.8833",
     "lng": "47.6333",
     "country": "Russia",
@@ -1453,6 +1585,7 @@
   },
   {
     "city": "Vnukovo",
+    "ru_name": "Внуково",
     "lat": "55.5997",
     "lng": "37.2800",
     "country": "Russia",
@@ -1464,6 +1597,7 @@
   },
   {
     "city": "Kovrov",
+    "ru_name": "Ковров",
     "lat": "56.3606",
     "lng": "41.3197",
     "country": "Russia",
@@ -1475,6 +1609,7 @@
   },
   {
     "city": "Derbent",
+    "ru_name": "Дербент",
     "lat": "42.0578",
     "lng": "48.2889",
     "country": "Russia",
@@ -1486,6 +1621,7 @@
   },
   {
     "city": "Nefteyugansk",
+    "ru_name": "Нефтеюганск",
     "lat": "61.1000",
     "lng": "72.6000",
     "country": "Russia",
@@ -1497,6 +1633,7 @@
   },
   {
     "city": "Nazran",
+    "ru_name": "Назрань",
     "lat": "43.2167",
     "lng": "44.7667",
     "country": "Russia",
@@ -1508,6 +1645,7 @@
   },
   {
     "city": "Kislovodsk",
+    "ru_name": "Кисловодск",
     "lat": "43.9100",
     "lng": "42.7200",
     "country": "Russia",
@@ -1519,6 +1657,7 @@
   },
   {
     "city": "Bataysk",
+    "ru_name": "Батайск",
     "lat": "47.1333",
     "lng": "39.7500",
     "country": "Russia",
@@ -1530,6 +1669,7 @@
   },
   {
     "city": "Yessentuki",
+    "ru_name": "Ессентуки",
     "lat": "44.0431",
     "lng": "42.8644",
     "country": "Russia",
@@ -1541,6 +1681,7 @@
   },
   {
     "city": "Cherkessk",
+    "ru_name": "Черкесск",
     "lat": "44.2222",
     "lng": "42.0575",
     "country": "Russia",
@@ -1552,6 +1693,7 @@
   },
   {
     "city": "Rubtsovsk",
+    "ru_name": "Рубцовск",
     "lat": "51.5167",
     "lng": "81.2000",
     "country": "Russia",
@@ -1563,6 +1705,7 @@
   },
   {
     "city": "Novocheboksarsk",
+    "ru_name": "Новочебоксарск",
     "lat": "56.1167",
     "lng": "47.5000",
     "country": "Russia",
@@ -1574,6 +1717,7 @@
   },
   {
     "city": "Dolgoprudnyy",
+    "ru_name": "Долгопрудный",
     "lat": "55.9333",
     "lng": "37.5000",
     "country": "Russia",
@@ -1585,6 +1729,7 @@
   },
   {
     "city": "Oktyabr’skiy",
+    "ru_name": "Октябрьский",
     "lat": "54.4833",
     "lng": "53.4833",
     "country": "Russia",
@@ -1596,6 +1741,7 @@
   },
   {
     "city": "Murino",
+    "ru_name": "Мурино",
     "lat": "60.0514",
     "lng": "30.4386",
     "country": "Russia",
@@ -1607,6 +1753,7 @@
   },
   {
     "city": "Novomoskovsk",
+    "ru_name": "Новомосковск",
     "lat": "54.0333",
     "lng": "38.2667",
     "country": "Russia",
@@ -1618,6 +1765,7 @@
   },
   {
     "city": "Ramenskoye",
+    "ru_name": "Раменское",
     "lat": "55.5669",
     "lng": "38.2303",
     "country": "Russia",
@@ -1629,6 +1777,7 @@
   },
   {
     "city": "Mikhaylovsk",
+    "ru_name": "Михайловск",
     "lat": "45.1283",
     "lng": "42.0256",
     "country": "Russia",
@@ -1640,6 +1789,7 @@
   },
   {
     "city": "Khanty-Mansiysk",
+    "ru_name": "Ханты-Мансийск",
     "lat": "61.0000",
     "lng": "69.0000",
     "country": "Russia",
@@ -1651,6 +1801,7 @@
   },
   {
     "city": "Nevinnomyssk",
+    "ru_name": "Невинномысск",
     "lat": "44.6333",
     "lng": "41.9333",
     "country": "Russia",
@@ -1662,6 +1813,7 @@
   },
   {
     "city": "Reutov",
+    "ru_name": "Реутов",
     "lat": "55.7622",
     "lng": "37.8567",
     "country": "Russia",
@@ -1673,6 +1825,7 @@
   },
   {
     "city": "Pushkino",
+    "ru_name": "Пушкино",
     "lat": "56.0167",
     "lng": "37.8500",
     "country": "Russia",
@@ -1684,6 +1837,7 @@
   },
   {
     "city": "Pervouralsk",
+    "ru_name": "Первоуральск",
     "lat": "56.9167",
     "lng": "59.9500",
     "country": "Russia",
@@ -1695,6 +1849,7 @@
   },
   {
     "city": "Zhukovskiy",
+    "ru_name": "Жуковский",
     "lat": "55.6011",
     "lng": "38.1161",
     "country": "Russia",
@@ -1706,6 +1861,7 @@
   },
   {
     "city": "Artëm",
+    "ru_name": "Артём",
     "lat": "43.3500",
     "lng": "132.1833",
     "country": "Russia",
@@ -1717,6 +1873,7 @@
   },
   {
     "city": "Pushkin",
+    "ru_name": "Пушкин",
     "lat": "59.7167",
     "lng": "30.4167",
     "country": "Russia",
@@ -1728,6 +1885,7 @@
   },
   {
     "city": "Dimitrovgrad",
+    "ru_name": "Димитровград",
     "lat": "54.2333",
     "lng": "49.5833",
     "country": "Russia",
@@ -1739,6 +1897,7 @@
   },
   {
     "city": "Novyy Urengoy",
+    "ru_name": "Новый Уренгой",
     "lat": "66.0847",
     "lng": "76.6789",
     "country": "Russia",
@@ -1750,6 +1909,7 @@
   },
   {
     "city": "Vidnoye",
+    "ru_name": "Видное",
     "lat": "55.5500",
     "lng": "37.7000",
     "country": "Russia",
@@ -1761,6 +1921,7 @@
   },
   {
     "city": "Seversk",
+    "ru_name": "Северск",
     "lat": "56.6000",
     "lng": "84.8500",
     "country": "Russia",
@@ -1772,6 +1933,7 @@
   },
   {
     "city": "Orekhovo-Zuyevo",
+    "ru_name": "Орехово-Зуево",
     "lat": "55.8000",
     "lng": "38.9667",
     "country": "Russia",
@@ -1783,6 +1945,7 @@
   },
   {
     "city": "Kamyshin",
+    "ru_name": "Камышин",
     "lat": "50.0833",
     "lng": "45.4000",
     "country": "Russia",
@@ -1794,6 +1957,7 @@
   },
   {
     "city": "Elista",
+    "ru_name": "Элиста",
     "lat": "46.3167",
     "lng": "44.2667",
     "country": "Russia",
@@ -1805,6 +1969,7 @@
   },
   {
     "city": "Murom",
+    "ru_name": "Муром",
     "lat": "55.5809",
     "lng": "42.0538",
     "country": "Russia",
@@ -1816,6 +1981,7 @@
   },
   {
     "city": "Arzamas",
+    "ru_name": "Арзамас",
     "lat": "55.3833",
     "lng": "43.8000",
     "country": "Russia",
@@ -1827,6 +1993,7 @@
   },
   {
     "city": "Noyabrsk",
+    "ru_name": "Ноябрьск",
     "lat": "63.2017",
     "lng": "75.4517",
     "country": "Russia",
@@ -1838,6 +2005,7 @@
   },
   {
     "city": "Noginsk",
+    "ru_name": "Ногинск",
     "lat": "55.8500",
     "lng": "38.4333",
     "country": "Russia",
@@ -1849,6 +2017,7 @@
   },
   {
     "city": "Berdsk",
+    "ru_name": "Бердск",
     "lat": "54.7500",
     "lng": "83.1000",
     "country": "Russia",
@@ -1860,6 +2029,7 @@
   },
   {
     "city": "Novoshakhtinsk",
+    "ru_name": "Новошахтинск",
     "lat": "47.7667",
     "lng": "39.9167",
     "country": "Russia",
@@ -1871,6 +2041,7 @@
   },
   {
     "city": "Tobolsk",
+    "ru_name": "Тобольск",
     "lat": "58.1953",
     "lng": "68.2581",
     "country": "Russia",
@@ -1882,6 +2053,7 @@
   },
   {
     "city": "Achinsk",
+    "ru_name": "Ачинск",
     "lat": "56.2817",
     "lng": "90.5039",
     "country": "Russia",
@@ -1893,6 +2065,7 @@
   },
   {
     "city": "Sergiyev Posad",
+    "ru_name": "Сергиев Посад",
     "lat": "56.3000",
     "lng": "38.1333",
     "country": "Russia",
@@ -1904,6 +2077,7 @@
   },
   {
     "city": "Votkinsk",
+    "ru_name": "Воткинск",
     "lat": "57.0500",
     "lng": "54.0000",
     "country": "Russia",
@@ -1915,6 +2089,7 @@
   },
   {
     "city": "Voskresensk",
+    "ru_name": "Воскресенск",
     "lat": "55.3167",
     "lng": "38.6833",
     "country": "Russia",
@@ -1926,6 +2101,7 @@
   },
   {
     "city": "Yelets",
+    "ru_name": "Елец",
     "lat": "52.6167",
     "lng": "38.4667",
     "country": "Russia",
@@ -1937,6 +2113,7 @@
   },
   {
     "city": "Serov",
+    "ru_name": "Серов",
     "lat": "59.6000",
     "lng": "60.5667",
     "country": "Russia",
@@ -1948,6 +2125,7 @@
   },
   {
     "city": "Gatchina",
+    "ru_name": "Гатчина",
     "lat": "59.5684",
     "lng": "30.1229",
     "country": "Russia",
@@ -1959,6 +2137,7 @@
   },
   {
     "city": "Magadan",
+    "ru_name": "Магадан",
     "lat": "59.5667",
     "lng": "150.8000",
     "country": "Russia",
@@ -1970,6 +2149,7 @@
   },
   {
     "city": "Lobnya",
+    "ru_name": "Лобня",
     "lat": "56.0167",
     "lng": "37.4833",
     "country": "Russia",
@@ -1981,6 +2161,7 @@
   },
   {
     "city": "Sarapul",
+    "ru_name": "Сарапул",
     "lat": "56.4667",
     "lng": "53.8000",
     "country": "Russia",
@@ -1992,6 +2173,7 @@
   },
   {
     "city": "Michurinsk",
+    "ru_name": "Мичуринск",
     "lat": "52.8922",
     "lng": "40.4928",
     "country": "Russia",
@@ -2003,6 +2185,7 @@
   },
   {
     "city": "Solikamsk",
+    "ru_name": "Соликамск",
     "lat": "59.6333",
     "lng": "56.7667",
     "country": "Russia",
@@ -2014,6 +2197,7 @@
   },
   {
     "city": "Glazov",
+    "ru_name": "Глазов",
     "lat": "58.1333",
     "lng": "52.6500",
     "country": "Russia",
@@ -2025,6 +2209,7 @@
   },
   {
     "city": "Velikiye Luki",
+    "ru_name": "Великие Луки",
     "lat": "56.3500",
     "lng": "30.5167",
     "country": "Russia",
@@ -2036,6 +2221,7 @@
   },
   {
     "city": "Ivanteyevka",
+    "ru_name": "Ивантеевка",
     "lat": "55.9700",
     "lng": "37.9200",
     "country": "Russia",
@@ -2047,6 +2233,7 @@
   },
   {
     "city": "Petrodvorets",
+    "ru_name": "Петродворец",
     "lat": "59.8833",
     "lng": "29.9000",
     "country": "Russia",
@@ -2058,6 +2245,7 @@
   },
   {
     "city": "Yurga",
+    "ru_name": "Юрга",
     "lat": "55.7333",
     "lng": "84.9000",
     "country": "Russia",
@@ -2069,6 +2257,7 @@
   },
   {
     "city": "Kuznetsk",
+    "ru_name": "Кузнецк",
     "lat": "53.1167",
     "lng": "46.6000",
     "country": "Russia",
@@ -2080,6 +2269,7 @@
   },
   {
     "city": "Chernogorsk",
+    "ru_name": "Черногорск",
     "lat": "53.8167",
     "lng": "91.2833",
     "country": "Russia",
@@ -2091,6 +2281,7 @@
   },
   {
     "city": "Kotelniki",
+    "ru_name": "Котельники",
     "lat": "55.6617",
     "lng": "37.8672",
     "country": "Russia",
@@ -2102,6 +2293,7 @@
   },
   {
     "city": "Kineshma",
+    "ru_name": "Кинешма",
     "lat": "57.4500",
     "lng": "42.1500",
     "country": "Russia",
@@ -2113,6 +2305,7 @@
   },
   {
     "city": "Vyborg",
+    "ru_name": "Выборг",
     "lat": "60.7106",
     "lng": "28.7497",
     "country": "Russia",
@@ -2124,6 +2317,7 @@
   },
   {
     "city": "Buynaksk",
+    "ru_name": "Буйнакск",
     "lat": "42.8167",
     "lng": "47.1167",
     "country": "Russia",
@@ -2135,6 +2329,7 @@
   },
   {
     "city": "Ishim",
+    "ru_name": "Ишим",
     "lat": "56.1167",
     "lng": "69.5000",
     "country": "Russia",
@@ -2146,6 +2341,7 @@
   },
   {
     "city": "Birobidzhan",
+    "ru_name": "Биробиджан",
     "lat": "48.7833",
     "lng": "132.9333",
     "country": "Russia",
@@ -2157,6 +2353,7 @@
   },
   {
     "city": "Lytkarino",
+    "ru_name": "Лыткарино",
     "lat": "55.5833",
     "lng": "37.9083",
     "country": "Russia",
@@ -2168,6 +2365,7 @@
   },
   {
     "city": "Vorkuta",
+    "ru_name": "Воркута",
     "lat": "67.5000",
     "lng": "64.0333",
     "country": "Russia",
@@ -2179,6 +2377,7 @@
   },
   {
     "city": "Kudrovo",
+    "ru_name": "Кудрово",
     "lat": "59.9086",
     "lng": "30.5136",
     "country": "Russia",
@@ -2190,6 +2389,7 @@
   },
   {
     "city": "Beloretsk",
+    "ru_name": "Белорецк",
     "lat": "53.9667",
     "lng": "58.4000",
     "country": "Russia",
@@ -2201,6 +2401,7 @@
   },
   {
     "city": "Kirovo-Chepetsk",
+    "ru_name": "Кирово-Чепецк",
     "lat": "58.5500",
     "lng": "50.0167",
     "country": "Russia",
@@ -2212,6 +2413,7 @@
   },
   {
     "city": "Gorno-Altaysk",
+    "ru_name": "Горно-Алтайск",
     "lat": "51.9600",
     "lng": "85.9600",
     "country": "Russia",
@@ -2223,6 +2425,7 @@
   },
   {
     "city": "Georgiyevsk",
+    "ru_name": "Георгиевск",
     "lat": "44.1500",
     "lng": "43.4667",
     "country": "Russia",
@@ -2234,6 +2437,7 @@
   },
   {
     "city": "Prokhladnyy",
+    "ru_name": "Прохладный",
     "lat": "43.7575",
     "lng": "44.0297",
     "country": "Russia",
@@ -2245,6 +2449,7 @@
   },
   {
     "city": "Moskovskiy",
+    "ru_name": "Московский",
     "lat": "55.5991",
     "lng": "37.3550",
     "country": "Russia",
@@ -2256,6 +2461,7 @@
   },
   {
     "city": "Zarechnyy",
+    "ru_name": "Заречный",
     "lat": "53.2000",
     "lng": "45.1667",
     "country": "Russia",
@@ -2267,6 +2473,7 @@
   },
   {
     "city": "Fryazino",
+    "ru_name": "Фрязино",
     "lat": "55.9500",
     "lng": "38.0500",
     "country": "Russia",
@@ -2278,6 +2485,7 @@
   },
   {
     "city": "Gukovo",
+    "ru_name": "Гуково",
     "lat": "48.0500",
     "lng": "39.9333",
     "country": "Russia",
@@ -2289,6 +2497,7 @@
   },
   {
     "city": "Dzerzhinskiy",
+    "ru_name": "Дзержинский",
     "lat": "55.6333",
     "lng": "37.8500",
     "country": "Russia",
@@ -2300,6 +2509,7 @@
   },
   {
     "city": "Shcherbinka",
+    "ru_name": "Щербинка",
     "lat": "55.4997",
     "lng": "37.5597",
     "country": "Russia",
@@ -2311,6 +2521,7 @@
   },
   {
     "city": "Klimovsk",
+    "ru_name": "Климовск",
     "lat": "55.3667",
     "lng": "37.5333",
     "country": "Russia",
@@ -2322,6 +2533,7 @@
   },
   {
     "city": "Neryungri",
+    "ru_name": "Нерюнгри",
     "lat": "56.6583",
     "lng": "124.7250",
     "country": "Russia",
@@ -2333,6 +2545,7 @@
   },
   {
     "city": "Shuya",
+    "ru_name": "Шуя",
     "lat": "56.8500",
     "lng": "41.3667",
     "country": "Russia",
@@ -2344,6 +2557,7 @@
   },
   {
     "city": "Salekhard",
+    "ru_name": "Салехард",
     "lat": "66.5333",
     "lng": "66.6333",
     "country": "Russia",
@@ -2355,6 +2569,7 @@
   },
   {
     "city": "Volzhsk",
+    "ru_name": "Волжск",
     "lat": "55.8667",
     "lng": "48.3500",
     "country": "Russia",
@@ -2366,6 +2581,7 @@
   },
   {
     "city": "Kizlyar",
+    "ru_name": "Кизляр",
     "lat": "43.8547",
     "lng": "46.7139",
     "country": "Russia",
@@ -2377,6 +2593,7 @@
   },
   {
     "city": "Uzlovaya",
+    "ru_name": "Узловая",
     "lat": "53.9791",
     "lng": "38.1601",
     "country": "Russia",
@@ -2388,6 +2605,7 @@
   },
   {
     "city": "Gus’-Khrustal’nyy",
+    "ru_name": "Гусь-Хрустальный",
     "lat": "55.6167",
     "lng": "40.6500",
     "country": "Russia",
@@ -2399,6 +2617,7 @@
   },
   {
     "city": "Rasskazovo",
+    "ru_name": "Рассказово",
     "lat": "52.6667",
     "lng": "41.8833",
     "country": "Russia",
@@ -2410,6 +2629,7 @@
   },
   {
     "city": "Krasnoznamensk",
+    "ru_name": "Краснознаменск",
     "lat": "55.6000",
     "lng": "37.0333",
     "country": "Russia",
@@ -2421,6 +2641,7 @@
   },
   {
     "city": "Kronshtadt",
+    "ru_name": "Кронштадт",
     "lat": "59.9908",
     "lng": "29.7747",
     "country": "Russia",
@@ -2432,6 +2653,7 @@
   },
   {
     "city": "Mozhga",
+    "ru_name": "Можга",
     "lat": "56.4500",
     "lng": "52.2167",
     "country": "Russia",
@@ -2443,6 +2665,7 @@
   },
   {
     "city": "Kanash",
+    "ru_name": "Канаш",
     "lat": "55.5167",
     "lng": "47.5000",
     "country": "Russia",
@@ -2454,6 +2677,7 @@
   },
   {
     "city": "Sosnovoborsk",
+    "ru_name": "Сосновоборск",
     "lat": "56.1333",
     "lng": "93.3667",
     "country": "Russia",
@@ -2465,6 +2689,7 @@
   },
   {
     "city": "Baksan",
+    "ru_name": "Баксан",
     "lat": "43.6833",
     "lng": "43.5333",
     "country": "Russia",
@@ -2476,6 +2701,7 @@
   },
   {
     "city": "Morshansk",
+    "ru_name": "Моршанск",
     "lat": "53.4500",
     "lng": "41.8000",
     "country": "Russia",
@@ -2487,6 +2713,7 @@
   },
   {
     "city": "Protvino",
+    "ru_name": "Протвино",
     "lat": "54.8667",
     "lng": "37.2167",
     "country": "Russia",
@@ -2498,6 +2725,7 @@
   },
   {
     "city": "Pereslavl’-Zalesskiy",
+    "ru_name": "Переславль-Залесский",
     "lat": "56.7381",
     "lng": "38.8562",
     "country": "Russia",
@@ -2509,6 +2737,7 @@
   },
   {
     "city": "Mtsensk",
+    "ru_name": "Мценск",
     "lat": "53.2833",
     "lng": "36.5667",
     "country": "Russia",
@@ -2520,6 +2749,7 @@
   },
   {
     "city": "Sharypovo",
+    "ru_name": "Шарыпово",
     "lat": "55.5250",
     "lng": "89.2000",
     "country": "Russia",
@@ -2531,6 +2761,7 @@
   },
   {
     "city": "Dagestanskiye Ogni",
+    "ru_name": "Дагестанские Огни",
     "lat": "42.1167",
     "lng": "48.2000",
     "country": "Russia",
@@ -2542,6 +2773,7 @@
   },
   {
     "city": "Teykovo",
+    "ru_name": "Тейково",
     "lat": "56.8500",
     "lng": "40.5500",
     "country": "Russia",
@@ -2553,6 +2785,7 @@
   },
   {
     "city": "Kokhma",
+    "ru_name": "Кохма",
     "lat": "56.9333",
     "lng": "41.0833",
     "country": "Russia",
@@ -2564,6 +2797,7 @@
   },
   {
     "city": "Losino-Petrovskiy",
+    "ru_name": "Лосино-Петровский",
     "lat": "55.8667",
     "lng": "38.2000",
     "country": "Russia",
@@ -2575,6 +2809,7 @@
   },
   {
     "city": "Kraskovo",
+    "ru_name": "Красково",
     "lat": "55.6586",
     "lng": "37.9869",
     "country": "Russia",
@@ -2586,6 +2821,7 @@
   },
   {
     "city": "Shumerlya",
+    "ru_name": "Шумерля",
     "lat": "55.5000",
     "lng": "46.4167",
     "country": "Russia",
@@ -2597,6 +2833,7 @@
   },
   {
     "city": "Kotovsk",
+    "ru_name": "Котовск",
     "lat": "52.5833",
     "lng": "41.5000",
     "country": "Russia",
@@ -2608,6 +2845,7 @@
   },
   {
     "city": "Udomlya",
+    "ru_name": "Удомля",
     "lat": "57.8833",
     "lng": "35.0167",
     "country": "Russia",
@@ -2619,6 +2857,7 @@
   },
   {
     "city": "Desnogorsk",
+    "ru_name": "Десногорск",
     "lat": "54.1531",
     "lng": "33.2903",
     "country": "Russia",
@@ -2630,6 +2869,7 @@
   },
   {
     "city": "Nar’yan-Mar",
+    "ru_name": "Нарьян-Мар",
     "lat": "67.6378",
     "lng": "53.0067",
     "country": "Russia",
@@ -2641,6 +2881,7 @@
   },
   {
     "city": "Karachayevsk",
+    "ru_name": "Карачаевск",
     "lat": "43.7722",
     "lng": "41.9139",
     "country": "Russia",
@@ -2652,6 +2893,7 @@
   },
   {
     "city": "Svetlyy",
+    "ru_name": "Светлый",
     "lat": "54.6833",
     "lng": "20.1333",
     "country": "Russia",
@@ -2663,6 +2905,7 @@
   },
   {
     "city": "Kozmodemyansk",
+    "ru_name": "Козьмодемьянск",
     "lat": "56.3419",
     "lng": "46.5636",
     "country": "Russia",
@@ -2674,6 +2917,7 @@
   },
   {
     "city": "Magas",
+    "ru_name": "Магас",
     "lat": "43.1667",
     "lng": "44.8167",
     "country": "Russia",
@@ -2685,6 +2929,7 @@
   },
   {
     "city": "Udelnaya",
+    "ru_name": "Удельная",
     "lat": "55.6333",
     "lng": "38.0333",
     "country": "Russia",
@@ -2696,6 +2941,7 @@
   },
   {
     "city": "Mosrentgen",
+    "ru_name": "Мосрентген",
     "lat": "55.6136",
     "lng": "37.4697",
     "country": "Russia",
@@ -2707,6 +2953,7 @@
   },
   {
     "city": "Kirsanov",
+    "ru_name": "Кирсанов",
     "lat": "52.6500",
     "lng": "42.7333",
     "country": "Russia",
@@ -2718,6 +2965,7 @@
   },
   {
     "city": "Seltso",
+    "ru_name": "Сельцо",
     "lat": "53.3694",
     "lng": "34.1000",
     "country": "Russia",
@@ -2729,6 +2977,7 @@
   },
   {
     "city": "Razvilka",
+    "ru_name": "Развилка",
     "lat": "55.5910",
     "lng": "37.7456",
     "country": "Russia",
@@ -2740,6 +2989,7 @@
   },
   {
     "city": "Streletskoye",
+    "ru_name": "Стрелецкое",
     "lat": "50.6303",
     "lng": "36.4833",
     "country": "Russia",
@@ -2751,6 +3001,7 @@
   },
   {
     "city": "Anadyr",
+    "ru_name": "Анадырь",
     "lat": "64.7333",
     "lng": "177.5042",
     "country": "Russia",
@@ -2762,6 +3013,7 @@
   },
   {
     "city": "Svetlyy",
+    "ru_name": "Светлый",
     "lat": "51.6737",
     "lng": "45.6305",
     "country": "Russia",
@@ -2773,6 +3025,7 @@
   },
   {
     "city": "Khasanya",
+    "ru_name": "Хасанья",
     "lat": "43.4333",
     "lng": "43.5750",
     "country": "Russia",
@@ -2784,6 +3037,7 @@
   },
   {
     "city": "Yuzhno-Sukhokumsk",
+    "ru_name": "Южно-Сухокумск",
     "lat": "44.6667",
     "lng": "45.6500",
     "country": "Russia",
@@ -2795,6 +3049,7 @@
   },
   {
     "city": "Kenzhe",
+    "ru_name": "Кенже",
     "lat": "43.4911",
     "lng": "43.5528",
     "country": "Russia",
@@ -2806,6 +3061,7 @@
   },
   {
     "city": "Nagayevo",
+    "ru_name": "Нагаево",
     "lat": "54.6247",
     "lng": "56.1194",
     "country": "Russia",
@@ -2817,6 +3073,7 @@
   },
   {
     "city": "Timofeyevka",
+    "ru_name": "Тимофеевка",
     "lat": "53.5633",
     "lng": "49.3893",
     "country": "Russia",
@@ -2828,6 +3085,7 @@
   },
   {
     "city": "Molochnoye",
+    "ru_name": "Молочное",
     "lat": "59.2914",
     "lng": "39.6683",
     "country": "Russia",
@@ -2839,6 +3097,7 @@
   },
   {
     "city": "Solyanka",
+    "ru_name": "Солянка",
     "lat": "46.3889",
     "lng": "48.0175",
     "country": "Russia",
@@ -2850,6 +3109,7 @@
   },
   {
     "city": "Khoytobze",
+    "ru_name": "Хойтобэе",
     "lat": "51.7881",
     "lng": "107.4311",
     "country": "Russia",
@@ -2861,6 +3121,7 @@
   },
   {
     "city": "Petrakovskoye",
+    "ru_name": "Петраковское",
     "lat": "43.2536",
     "lng": "46.6315",
     "country": "Russia",
@@ -2872,6 +3133,7 @@
   },
   {
     "city": "Belaya Rechka",
+    "ru_name": "Белая Речка",
     "lat": "43.4381",
     "lng": "43.5350",
     "country": "Russia",
@@ -2883,6 +3145,7 @@
   },
   {
     "city": "Syrskoye",
+    "ru_name": "Сырское",
     "lat": "52.5658",
     "lng": "39.5181",
     "country": "Russia",
@@ -2894,6 +3157,7 @@
   },
   {
     "city": "Dzerzhinskoye",
+    "ru_name": "Дзержинское",
     "lat": "56.5183",
     "lng": "84.8369",
     "country": "Russia",
@@ -2905,6 +3169,7 @@
   },
   {
     "city": "Novyy Deybuk",
+    "ru_name": "Новый Дейбук",
     "lat": "42.5094",
     "lng": "47.8428",
     "country": "Russia",
@@ -2916,6 +3181,7 @@
   },
   {
     "city": "Sosnovka",
+    "ru_name": "Сосновка",
     "lat": "55.1131",
     "lng": "60.9643",
     "country": "Russia",
@@ -2927,6 +3193,7 @@
   },
   {
     "city": "Karanayaul",
+    "ru_name": "Каранайаул",
     "lat": "42.5136",
     "lng": "47.8556",
     "country": "Russia",
@@ -2938,6 +3205,7 @@
   },
   {
     "city": "Nizhniy Chiryurt",
+    "ru_name": "Нижний Чирюрт",
     "lat": "43.1712",
     "lng": "46.8637",
     "country": "Russia",
@@ -2949,6 +3217,7 @@
   },
   {
     "city": "Ryshkovo",
+    "ru_name": "Рышково",
     "lat": "51.6604",
     "lng": "36.1862",
     "country": "Russia",
@@ -2960,6 +3229,7 @@
   },
   {
     "city": "Staryye Turbasly",
+    "ru_name": "Старые Турбаслы",
     "lat": "54.9439",
     "lng": "56.1236",
     "country": "Russia",
@@ -2971,6 +3241,7 @@
   },
   {
     "city": "Yakimanskaya Sloboda",
+    "ru_name": "Якиманская Слобода",
     "lat": "55.5994",
     "lng": "42.0422",
     "country": "Russia",
@@ -2982,6 +3253,7 @@
   },
   {
     "city": "Michurinskiy",
+    "ru_name": "Мичуринский",
     "lat": "54.8809",
     "lng": "83.0110",
     "country": "Russia",
@@ -2993,6 +3265,7 @@
   },
   {
     "city": "Dmitriyevskaya Sloboda",
+    "ru_name": "Дмитриевская Слобода",
     "lat": "55.6100",
     "lng": "42.0367",
     "country": "Russia",
@@ -3004,6 +3277,7 @@
   },
   {
     "city": "Votikeyevo",
+    "ru_name": "Вотикеево",
     "lat": "54.8742",
     "lng": "56.2197",
     "country": "Russia",
@@ -3015,6 +3289,7 @@
   },
   {
     "city": "Vlasikha",
+    "ru_name": "Власиха",
     "lat": "55.6842",
     "lng": "37.1966",
     "country": "Russia",
@@ -3026,6 +3301,7 @@
   },
   {
     "city": "Solnechnyy",
+    "ru_name": "Солнечный",
     "lat": "55.2854",
     "lng": "89.8283",
     "country": "Russia",

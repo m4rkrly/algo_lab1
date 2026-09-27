@@ -58,7 +58,19 @@ class RowGenerator:
 
 
     def __generate_route(self) -> Route:
-        raise NotImplementedError
+        departure_city = choice(self.data_holder.CITIES)
+        arrival_city = departure_city
+        while departure_city == arrival_city:
+            arrival_city = choice(self.data_holder.CITIES)
+        
+        delta = (
+            float(departure_city["lat"]) - float(arrival_city["lat"]),
+            float(departure_city["lng"]) - float(arrival_city["lng"])
+        )
+        
+        distance = (delta[0]**2 + delta[1]**2)**(1/2)
+        
+        return Route(departure_city["ru_name"], arrival_city["ru_name"], distance)
 
     def __generate_time(self) -> RouteTime:
         raise NotImplementedError
@@ -83,8 +95,8 @@ class RowGenerator:
         self.cur_row.name = self.__generate_name()
         self.cur_row.passport_number = self.__generate_passport()
         self.cur_row.card_number = self.card_gen.generate_card(self.data_holder)
+        self.cur_row.route = self.__generate_route()
 
-        self.cur_row.route = Route("Санкт-Петербург", "Москва", 600)
         self.cur_row.route_time = rt
         self.cur_row.train_data = tr
         self.cur_row.cost = 2460

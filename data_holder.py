@@ -38,6 +38,11 @@ class DataHolder:
             self.BICS = load(file)
 
         self.CUSTOM_PROBS = {}
+        
+        # Города
+        with open(CITIES_FILE, encoding = "utf-8") as file:
+            self.CITIES = load(file)
+
     
 
 
