@@ -40,7 +40,8 @@ class RowGenerator:
             passport_blank_year = choice([year for year in range(PASSPORT_YEAR_RANGE[0], PASSPORT_YEAR_RANGE[1]+1)])
             passport_blank_year = str(passport_blank_year)[2:]
             
-            passport_blank_number = randint(100_000, 999_999)
+            passport_blank_number = str(randint(1, 999_999))
+            passport_blank_number = passport_blank_number.zfill(6)
             
             passport_number = f"{region_number}{passport_blank_year} {passport_blank_number}"
             return passport_number
@@ -59,7 +60,36 @@ class RowGenerator:
         raise NotImplementedError
 
     def __generate_card(self) -> str:
-        raise NotImplementedError
+        chosen_bank = str()
+        chosen_bic = str()
+
+        with open(CARD_BANKS_FILE, encoding = "utf-8") as file:
+            banks = json.load(file)
+            chosen_bank = choice(banks)
+
+        with open(CARD_BICS_FILE, encoding = "utf-8") as file:
+            bics = json.load(file) 
+            chosen_bic = choice(bics[chosen_bank])
+
+
+        card_user_number = str(randint(1, 999_999_999))
+        card_user_number = card_user_number.zfill(9)
+        
+        control_digit = randint(0, 9)
+
+        raw_card_number = f"{chosen_bic}{card_user_number}{control_digit}"
+
+        counter = 0
+        card_number = str()
+        for digit in raw_card_number:
+            card_number += digit
+            counter += 1
+            if counter == 4:
+                card_number += ' '
+                counter = 0
+
+        return card_number
+
 
     def generate_row(self) -> Row:
         self.cur_row = Row()
@@ -74,12 +104,12 @@ class RowGenerator:
 
         self.cur_row.name = self.__generate_name()
         self.cur_row.passport_number = self.__generate_passport()
+        self.cur_row.card_number = self.__generate_card()
 
         self.cur_row.route = Route("Санкт-Петербург", "Москва", 600)
         self.cur_row.route_time = rt
         self.cur_row.train_data = tr
         self.cur_row.cost = 2460
-        self.cur_row.card_number = "1234 5678 1234 5678"
         
         return self.cur_row
 

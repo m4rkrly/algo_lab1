@@ -11,5 +11,10 @@ NAMES_FILES = {
         "patronymics":"ru_patronymic_woman.json"
     }
 }
+
 PASSPORT_FILE = "data/passport/passport_region_numbers.json"
-PASSPORT_YEAR_RANGE = (1927, 2026)
+PASSPORT_YEAR_RANGE = (1997, 2026)
+
+CARD_BICS_FILE = "data/bank_card/bics.json"
+CARD_BANKS_FILE = "data/bank_card/banks.json"
+
