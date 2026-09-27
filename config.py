@@ -18,3 +18,4 @@ PASSPORT_YEAR_RANGE = (1997, 2026)
 CARD_BICS_FILE = "data/bank_card/bics.json"
 CARD_BANKS_FILE = "data/bank_card/banks.json"
 
+ROW_AMOUNT = 10

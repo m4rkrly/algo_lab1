@@ -3,6 +3,8 @@ from config import *
 import json
 from random import choice, randint
 
+from data_holder import DataHolder
+import data_holder
 from route_time import RouteTime
 from train_data import TrainData
 from route import Route
@@ -10,41 +12,46 @@ from row import Row
 
 class RowGenerator:
     cur_row: Row
+    data_holder: DataHolder
+
+    def __init__(self, dh: DataHolder):
+        self.data_holder = dh
 
     def __generate_name(self) -> str:
+        NAMES = {
+            "man":{
+                "names":self.data_holder.NAMES_MAN,
+                "surnames":self.data_holder.SURNAMES_MAN,
+                "patronymics":self.data_holder.PATRONIMYCS_MAN
+            },
+            "woman":{
+                "names":self.data_holder.NAMES_WOMAN,
+                "surnames":self.data_holder.SURNAMES_WOMAN,
+                "patronymics":self.data_holder.PATRONIMYCS_WOMAN
+            }
+        }
+
         cur_sex = choice(["man", "woman"])
-        cur_name = str()
-        cur_surname = str()
-        cur_patronymic = str()
-
-        with open(NAMES_PATH + NAMES_FILES[cur_sex]["names"], encoding = 'utf-8') as file:
-            names = json.load(file)
-            cur_name = choice(names)
-
-        with open(NAMES_PATH + NAMES_FILES[cur_sex]["surnames"], encoding = 'utf-8') as file:
-            surnames = json.load(file)
-            cur_surname = choice(surnames)
-
-        with open(NAMES_PATH + NAMES_FILES[cur_sex]["patronymics"], encoding = 'utf-8') as file:
-            patronymics = json.load(file)
-            cur_patronymic = choice(patronymics)
         
+        cur_name = choice(NAMES[cur_sex]["names"])
+        cur_surname = choice(NAMES[cur_sex]["surnames"])
+        cur_patronymic = choice(NAMES[cur_sex]["patronymics"])
+       
         return f"{cur_surname} {cur_name} {cur_patronymic}"
 
 
     def __generate_passport(self) -> str:
-        with open(PASSPORT_FILE, encoding = 'utf-8') as file:
-            region_numbers = json.load(file)
-            region_number = choice(region_numbers)
-           
-            passport_blank_year = choice([year for year in range(PASSPORT_YEAR_RANGE[0], PASSPORT_YEAR_RANGE[1]+1)])
-            passport_blank_year = str(passport_blank_year)[2:]
-            
-            passport_blank_number = str(randint(1, 999_999))
-            passport_blank_number = passport_blank_number.zfill(6)
-            
-            passport_number = f"{region_number}{passport_blank_year} {passport_blank_number}"
-            return passport_number
+        region_numbers = self.data_holder.PASSPORT_REGIONS
+        region_number = choice(region_numbers)
+        
+        passport_blank_year = choice([year for year in range(PASSPORT_YEAR_RANGE[0], PASSPORT_YEAR_RANGE[1]+1)])
+        passport_blank_year = str(passport_blank_year)[2:]
+        
+        passport_blank_number = str(randint(1, 999_999))
+        passport_blank_number = passport_blank_number.zfill(6)
+        
+        passport_number = f"{region_number}{passport_blank_year} {passport_blank_number}"
+        return passport_number
 
 
     def __generate_route(self) -> Route:
@@ -60,17 +67,8 @@ class RowGenerator:
         raise NotImplementedError
 
     def __generate_card(self) -> str:
-        chosen_bank = str()
-        chosen_bic = str()
-
-        with open(CARD_BANKS_FILE, encoding = "utf-8") as file:
-            banks = json.load(file)
-            chosen_bank = choice(banks)
-
-        with open(CARD_BICS_FILE, encoding = "utf-8") as file:
-            bics = json.load(file) 
-            chosen_bic = choice(bics[chosen_bank])
-
+        chosen_bank = choice(self.data_holder.BANKS)
+        chosen_bic = choice(self.data_holder.BICS[chosen_bank])
 
         card_user_number = str(randint(1, 999_999_999))
         card_user_number = card_user_number.zfill(9)

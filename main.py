@@ -1,12 +1,16 @@
+from config import ROW_AMOUNT
+
+from data_holder import DataHolder
 from generator import RowGenerator
 from openpyxl import Workbook
 
-row_amount = 10
-gen = RowGenerator()
+dh = DataHolder()
+gen = RowGenerator(dh)
+
 wb = Workbook()
 sheet = wb.active
 
-for _ in range(10):
+for _ in range(ROW_AMOUNT):
     rw = gen.generate_row()
     sheet.append(rw.get_row_as_tuple())
 
