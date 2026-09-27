@@ -4,7 +4,7 @@ import json
 from random import choice, randint
 
 from data_holder import DataHolder
-import data_holder
+from card_generator import CardGenerator
 from route_time import RouteTime
 from train_data import TrainData
 from route import Route
@@ -13,9 +13,12 @@ from row import Row
 class RowGenerator:
     cur_row: Row
     data_holder: DataHolder
+    card_gen: CardGenerator
 
     def __init__(self, dh: DataHolder):
         self.data_holder = dh
+
+        self.card_gen = CardGenerator(self.data_holder)
 
     def __generate_name(self) -> str:
         NAMES = {
@@ -66,29 +69,6 @@ class RowGenerator:
     def __generate_cost(self) -> int:
         raise NotImplementedError
 
-    def __generate_card(self) -> str:
-        chosen_bank = choice(self.data_holder.BANKS)
-        chosen_bic = choice(self.data_holder.BICS[chosen_bank])
-
-        card_user_number = str(randint(1, 999_999_999))
-        card_user_number = card_user_number.zfill(9)
-        
-        control_digit = randint(0, 9)
-
-        raw_card_number = f"{chosen_bic}{card_user_number}{control_digit}"
-
-        counter = 0
-        card_number = str()
-        for digit in raw_card_number:
-            card_number += digit
-            counter += 1
-            if counter == 4:
-                card_number += ' '
-                counter = 0
-
-        return card_number
-
-
     def generate_row(self) -> Row:
         self.cur_row = Row()
         tr = TrainData()
@@ -102,7 +82,7 @@ class RowGenerator:
 
         self.cur_row.name = self.__generate_name()
         self.cur_row.passport_number = self.__generate_passport()
-        self.cur_row.card_number = self.__generate_card()
+        self.cur_row.card_number = self.card_gen.generate_card(self.data_holder)
 
         self.cur_row.route = Route("Санкт-Петербург", "Москва", 600)
         self.cur_row.route_time = rt

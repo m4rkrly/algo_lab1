@@ -37,6 +37,7 @@ class DataHolder:
         with open(CARD_BICS_FILE, encoding = "utf-8") as file: 
             self.BICS = load(file)
 
+        self.CUSTOM_PROBS = {}
     
 
 
