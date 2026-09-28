@@ -77,14 +77,15 @@ class RowGenerator:
         
         return Route(departure_city["ru_name"], arrival_city["ru_name"], distance)
 
-    def __generate_time(self) -> RouteTime:
-        raise NotImplementedError
-
     def __generate_train_data(self) -> TrainData:
         raise NotImplementedError
 
-    def __generate_cost(self) -> int:
+    def __generate_wagon_and_place(self) -> str:
         raise NotImplementedError
+
+    def __generate_cost(self, distance: float) -> int:
+        cost = int(distance * 1000)
+        return cost
 
     def generate_row(self) -> Row:
         self.cur_row = Row()
@@ -101,13 +102,9 @@ class RowGenerator:
         self.cur_row.passport_number = self.__generate_passport()
         self.cur_row.card_number = self.card_gen.generate_card(self.data_holder)
         self.cur_row.route = self.__generate_route()
+        self.cur_row.cost = self.__generate_cost(self.cur_row.route.distance)
 
         self.cur_row.route_time = rt
         self.cur_row.train_data = tr
-        self.cur_row.cost = 2460
         
         return self.cur_row
-
-
-
-
