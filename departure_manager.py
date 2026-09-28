@@ -9,7 +9,10 @@ class DepartureManager:
         return self.occupied_time.get(departure_number, [])
 
     def add_occupied_time(self, departure_number: str, road_time: RoadTime) -> None:
-        raise NotImplementedError
+        if self.occupied_time.get(departure_number) == None:
+            self.occupied_time[departure_number] = [road_time]
+        else:
+            self.occupied_time[departure_number].append(road_time)
 
     # def find_intersection(self, departure_number: str, road_time: RoadTime) -> DepartureData | None:
     #     raise NotImplementedError

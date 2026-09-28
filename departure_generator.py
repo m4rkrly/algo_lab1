@@ -98,10 +98,12 @@ class DepartureGenerator:
         # Здесь сделать выбор случайного номера и буквы по типу поезда
         raise NotImplementedError
 
+    def __calculate_time_limit(self, train_type: str, road_time: RoadTime) -> RoadTime:
+        # Здесь высчитывать полное время занятости рейса
+        raise NotImplementedError
+
     # def __build_back(self, dep: DepartureData) -> DepartureData:
     #     # Здесь сделать алгоритм создания обратного рейса
     #     raise NotImplementedError
 
-    def __calculate_time_limit(self, train_type: str, road_time: RoadTime) -> RoadTime:
-        # Здесь высчитывать полное время занятости рейса
-        raise NotImplementedError
+
