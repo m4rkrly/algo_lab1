@@ -34,10 +34,14 @@ class DataHolder:
         with open(CARD_BANKS_FILE, encoding = "utf-8") as file:
             self.BANKS = load(file)
 
-        with open(CARD_BICS_FILE, encoding = "utf-8") as file: 
-            self.BICS = load(file)
+        with open(CARD_BINS_FILE, encoding = "utf-8") as file: 
+            self.BINS = load(file)
 
-        self.CUSTOM_PROBS = {}
+        with open(CARD_SYSTEMS_FILE, encoding = "utf-8") as file:
+            self.SYSTEMS = load(file)
+
+        self.CUSTOM_BANKS_PROBS = {}
+        self.CUSTOM_SYSTEMS_PROBS = {"MIR":0.2, "AmEx":0.2, "Visa":0.2, "Mastercard":0.2, "UnionPay":0.2}
         
         # Города
         with open(CITIES_FILE, encoding = "utf-8") as file:

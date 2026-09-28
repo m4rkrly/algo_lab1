@@ -1,6 +1,5 @@
 from datetime import datetime
 from config import *
-import json
 from random import choice, randint
 
 from data_holder import DataHolder
@@ -14,6 +13,8 @@ class RowGenerator:
     cur_row: Row
     data_holder: DataHolder
     card_gen: CardGenerator
+
+    passports: set = set()
 
     def __init__(self, dh: DataHolder):
         self.data_holder = dh
@@ -44,17 +45,21 @@ class RowGenerator:
 
 
     def __generate_passport(self) -> str:
-        region_numbers = self.data_holder.PASSPORT_REGIONS
-        region_number = choice(region_numbers)
-        
-        passport_blank_year = choice([year for year in range(PASSPORT_YEAR_RANGE[0], PASSPORT_YEAR_RANGE[1]+1)])
-        passport_blank_year = str(passport_blank_year)[2:]
-        
-        passport_blank_number = str(randint(1, 999_999))
-        passport_blank_number = passport_blank_number.zfill(6)
-        
-        passport_number = f"{region_number}{passport_blank_year} {passport_blank_number}"
-        return passport_number
+        while True:
+            region_numbers = self.data_holder.PASSPORT_REGIONS
+            region_number = choice(region_numbers)
+            
+            passport_blank_year = choice([year for year in range(PASSPORT_YEAR_RANGE[0], PASSPORT_YEAR_RANGE[1]+1)])
+            passport_blank_year = str(passport_blank_year)[2:]
+            
+            passport_blank_number = str(randint(1, 999_999))
+            passport_blank_number = passport_blank_number.zfill(6)
+            
+            passport_number = f"{region_number}{passport_blank_year} {passport_blank_number}"
+            
+            if passport_number not in self.passports:
+                self.passports.add(passport_number)
+                return passport_number
 
 
     def __generate_route(self) -> Route:
