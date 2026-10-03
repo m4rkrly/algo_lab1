@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from json import load
 from config import *
 
@@ -59,3 +60,17 @@ class DataHolder:
         self.TRAINS_LETTERS = ("А", "Б", "В", "Г", "Д", "E", "Ж", "И", "Й", "К", "М", "Н", "О", "С", "У", "Ч", "Э", "Я")
         self.DISTANCE_COEFFICITENT = 111.1
         self.SEASONAL_PROB = {"regular":0.7, "seasonal":0.3}
+        self.TRAINS_SPEEDS = {
+            "high_speed":200,
+            "speed":130,
+            "hasty":90,
+            "regular":50
+        }
+        self.TRAINS_BREAKS = {
+            "high_speed":timedelta(hours = 1),
+            "speed":timedelta(hours = 1),
+            "hasty":timedelta(hours = 3),
+            "regular":timedelta(hours = 3)
+        }
+        self.CURRENT_TIME = datetime.now()
+

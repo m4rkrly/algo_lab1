@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
 from random import choice, choices, randint
-from re import sub
 
 from data_holder import DataHolder
 from departure_data import DepartureData
@@ -38,15 +37,12 @@ class DepartureGenerator:
             cur_departure.train_type
         )
 
-        cur_departure.road_time = RoadTime(datetime.now() + timedelta(days=1))
-        return cur_departure
-
         # (5) Узнать ограничения по времени из DepartureManager, если они есть
         time_limits = self.dep_manager.get_occupied_time(cur_departure.train_number)
 
         # (6) Сгенерировать время отправления и прибытия
         cur_departure.road_time = self.__generate_time(
-            cur_departure.train_subtype,
+            cur_departure.train_type,
             cur_departure.route.distance,
             time_limits
         )
@@ -69,7 +65,7 @@ class DepartureGenerator:
         #     )
 
         # (9) Добавить ограничения по времени в архив
-        time_limit = self.__calculate_time_limit(cur_departure.train_subtype, cur_departure.road_time)
+        time_limit = self.__calculate_time_limit(cur_departure.train_type, cur_departure.road_time)
         self.dep_manager.add_occupied_time(cur_departure.train_number, time_limit)
 
         return cur_departure
@@ -100,9 +96,32 @@ class DepartureGenerator:
         )
 
 
-    def __generate_time(self, train_subtype: str, distance: float, time_limits: list[RoadTime]) -> RoadTime:
-        # Здесь сделать тот алгортм, который я записал, со свободными интервалами
-        raise NotImplementedError
+    def __generate_time(self, train_type: str, distance: float, time_limits: list[RoadTime]) -> RoadTime:
+        # Время пути выражается в часах 
+        time_in_way = timedelta(hours = distance / self.data_holder.TRAINS_SPEEDS[train_type])
+
+        previous_time = self.data_holder.CURRENT_TIME
+        free_times = []
+        free_times_lengths = []
+        for limit in time_limits:
+            free_times.append((previous_time, limit.departure_time))
+            previous_time = limit.arrival_time
+            free_times_lengths.append(limit.departure_time - previous_time)
+
+        time_window = tuple()
+        for i in range(len(free_times)):
+            diff = free_times_lengths[i] - time_in_way
+            if diff > timedelta(days = 1):
+                time_window = (free_times[i][0], diff)
+        
+        if time_window == tuple():
+            time_window = (previous_time, timedelta(days = 1))
+
+        seconds = time_window[1].total_seconds()
+        dep_time = time_window[0] + timedelta(seconds=randint(3600, int(seconds)))
+        arr_time = dep_time + time_in_way        
+
+        return RoadTime(dep_time, arr_time)
 
     def __generate_train_type(self, route: Route) -> tuple[str, str]:
         distance = route.distance
@@ -149,8 +168,10 @@ class DepartureGenerator:
         return f"{chosen_number}{chosen_letter}"
 
     def __calculate_time_limit(self, train_type: str, road_time: RoadTime) -> RoadTime:
-        # Здесь высчитывать полное время занятости рейса
-        raise NotImplementedError
+        time_in_way = road_time.arrival_time - road_time.departure_time
+        occupied_time = road_time.departure_time + 2*time_in_way + 2*self.data_holder.TRAINS_BREAKS[train_type]
+        return RoadTime(road_time.departure_time, occupied_time)
+        
 
     # def __build_back(self, dep: DepartureData) -> DepartureData:
     #     # Здесь сделать алгоритм создания обратного рейса

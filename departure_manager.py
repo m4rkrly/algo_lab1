@@ -2,7 +2,7 @@ from departure_data import DepartureData
 from road_time import RoadTime
 
 class DepartureManager:
-    occupied_time: dict[str, list[RoadTime]]
+    occupied_time: dict[str, list[RoadTime]] = {}
     # backs_pool: list[DepartureData]
 
     def get_occupied_time(self, departure_number: str) -> list[RoadTime]:
