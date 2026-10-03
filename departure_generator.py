@@ -1,4 +1,6 @@
-from random import choice
+from datetime import datetime, timedelta
+from random import choice, choices
+from re import sub
 
 from data_holder import DataHolder
 from departure_data import DepartureData
@@ -19,7 +21,7 @@ class DepartureGenerator:
     def generate_departure(self) -> DepartureData:
         cur_departure = DepartureData()
 
-        # # (1) Подкинуть монетку и взять/не брать обратный рейс
+        # (1) Подкинуть монетку и взять/не брать обратный рейс
         # random_back = self.dep_manager.get_random_back()
         # if random_back != None: return random_back
 
@@ -30,6 +32,10 @@ class DepartureGenerator:
         cur_departure.train_type, cur_departure.train_subtype = self.__generate_train_type(
             cur_departure.route
         )
+
+        cur_departure.road_time = RoadTime(datetime.now() + timedelta(days=1))
+        cur_departure.train_number = "001A"
+        return cur_departure
         
         # (4) Сгенерировать номер рейса
         cur_departure.train_number = self.__generate_route_number(
@@ -75,15 +81,24 @@ class DepartureGenerator:
         arrival_city = departure_city
         while departure_city == arrival_city:
             arrival_city = choice(self.data_holder.CITIES)
-        
+       
+        arr_city_status = arrival_city["capital"] if arrival_city["capital"] != "" else "minor"
+        dep_city_status = departure_city["capital"] if departure_city["capital"] != "" else "minor"
+
         delta = (
             float(departure_city["lat"]) - float(arrival_city["lat"]),
             float(departure_city["lng"]) - float(arrival_city["lng"])
         )
         
-        distance = (delta[0]**2 + delta[1]**2)**(1/2)
+        distance = ((delta[0] * self.data_holder.DISTANCE_COEFFICITENT)**2 + (delta[0] * self.data_holder.DISTANCE_COEFFICITENT)**2)**(1/2)
         
-        return Route(departure_city["ru_name"], arrival_city["ru_name"], distance)
+        return Route(
+            departure_city["ru_name"],
+            dep_city_status, 
+            arrival_city["ru_name"],
+            arr_city_status,
+            distance
+        )
 
 
     def __generate_time(self, train_subtype: str, distance: float, time_limits: list[RoadTime]) -> RoadTime:
@@ -91,8 +106,35 @@ class DepartureGenerator:
         raise NotImplementedError
 
     def __generate_train_type(self, route: Route) -> tuple[str, str]:
-        # Здесь сделать выбор типа и подтипа поезда 
-        raise NotImplementedError
+        distance = route.distance
+
+        route_case = str()
+        if route.arrival_city in ("Москва, Санкт-Петербург") and route.departure_city in ("Москва, Санкт-Петербург"):
+            route_case = "moscow-spb"
+        elif (route.dep_city_status == "admin") ^ (route.arr_city_status == "admin"):
+            route_case = "admin-minor"
+        else:
+            route_case = "minor-minor"
+
+        probabilities: dict[str, dict[str, float]] = self.data_holder.TRAINS_TYPES_PROBS[route_case]
+
+        types_probs = dict()
+        for str_limit, probs in probabilities.items():
+            limit = str_limit.split("-")
+            limit = list(map(int, limit))
+
+            if limit[0] <= distance <= limit[1]:
+                types_probs = probs
+                break
+
+        train_type = choices(list(types_probs.keys()), weights = list(types_probs.values()), k=1)[0]
+
+        subtype_probs: dict[str, float] = self.data_holder.TRAINS_SUBTYPES_PROBS[route_case][train_type]
+        train_subtype = choices(list(subtype_probs.keys()), weights= list(subtype_probs.values()), k=1)[0]
+        
+        print(train_type, train_subtype)
+        return (train_type, train_subtype)
+            
 
     def __generate_route_number(self, train_type: str) -> str:
         # Здесь сделать выбор случайного номера и буквы по типу поезда

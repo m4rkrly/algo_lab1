@@ -43,9 +43,17 @@ class DataHolder:
         self.CUSTOM_BANKS_PROBS = {}
         self.CUSTOM_SYSTEMS_PROBS = {"MIR":0.2, "AmEx":0.2, "Visa":0.2, "Mastercard":0.2, "UnionPay":0.2}
         
-        # Города
+        # Города, расстояния и проч.
         with open(CITIES_FILE, encoding = "utf-8") as file:
             self.CITIES = load(file)
+
+        with open(TRAINS_TYPES_PROBS_FILE, encoding = "utf-8") as file:
+            self.TRAINS_TYPES_PROBS = load(file)
+
+        with open(TRAINS_SUBTYPES_PROBS_FILE, encoding = "utf-8") as file:
+            self.TRAINS_SUBTYPES_PROBS = load(file)
+
+        self.DISTANCE_COEFFICITENT = 111.1
 
     
 

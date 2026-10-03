@@ -3,9 +3,10 @@ from config import *
 from random import choice, randint
 
 from data_holder import DataHolder
+from departure_data import DepartureData
 from card_generator import CardGenerator
-from route_time import RouteTime
-from train_data import TrainData
+from departure_generator import DepartureGenerator
+from road_time import RoadTime
 from route import Route
 from row import Row
 
@@ -13,6 +14,7 @@ class RowGenerator:
     cur_row: Row
     data_holder: DataHolder
     card_gen: CardGenerator
+    dep_gen: DepartureGenerator
 
     passports: set = set()
 
@@ -20,6 +22,7 @@ class RowGenerator:
         self.data_holder = dh
 
         self.card_gen = CardGenerator(self.data_holder)
+        self.dep_gen = DepartureGenerator(self.data_holder)
 
     def __generate_name(self) -> str:
         NAMES = {
@@ -61,50 +64,22 @@ class RowGenerator:
                 self.passports.add(passport_number)
                 return passport_number
 
-
-    def __generate_route(self) -> Route:
-        departure_city = choice(self.data_holder.CITIES)
-        arrival_city = departure_city
-        while departure_city == arrival_city:
-            arrival_city = choice(self.data_holder.CITIES)
-        
-        delta = (
-            float(departure_city["lat"]) - float(arrival_city["lat"]),
-            float(departure_city["lng"]) - float(arrival_city["lng"])
-        )
-        
-        distance = (delta[0]**2 + delta[1]**2)**(1/2)
-        
-        return Route(departure_city["ru_name"], arrival_city["ru_name"], distance)
-
-    def __generate_train_data(self) -> TrainData:
-        raise NotImplementedError
-
-    def __generate_wagon_and_place(self) -> str:
-        raise NotImplementedError
-
     def __generate_cost(self, distance: float) -> int:
         cost = int(distance * 1000)
         return cost
 
     def generate_row(self) -> Row:
         self.cur_row = Row()
-        tr = TrainData()
-        tr.place_number = 12
-        tr.wagon_number = 3
-        tr.train_number = "723A"
-        rt = RouteTime()
-        rt.departure_time = datetime(year=2026, month=1, day=22, hour=8, minute=30)
-        rt.arrival_time = datetime(year=2026, month=1, day=22, hour=22, minute=30)
 
+        self.cur_row.wagon_and_place = "3-12"
 
         self.cur_row.name = self.__generate_name()
         self.cur_row.passport_number = self.__generate_passport()
-        self.cur_row.card_number = self.card_gen.generate_card(self.data_holder)
-        self.cur_row.route = self.__generate_route()
-        self.cur_row.cost = self.__generate_cost(self.cur_row.route.distance)
+        
+        self.cur_row.dep_data = self.dep_gen.generate_departure()
 
-        self.cur_row.route_time = rt
-        self.cur_row.train_data = tr
+        self.cur_row.card_number = self.card_gen.generate_card(self.data_holder)
+        self.cur_row.cost = self.__generate_cost(self.cur_row.dep_data.route.distance)
         
         return self.cur_row
+

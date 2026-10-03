@@ -1,0 +1,46 @@
+{
+  "moscow-spb": {
+    "0-10000": {
+      "high_speed": 0.8,
+      "speed": 0.2,
+      "hasty": 0.0,
+      "regular": 0.0
+    }
+  },
+  "admin-admin": {
+    "0-700": {
+      "high_speed": 0,
+      "speed": 0.6,
+      "hasty": 0.25,
+      "regular": 0.15
+    },
+    "701-10000": {
+      "high_speed": 0,
+      "speed": 0,
+      "hasty": 0.7,
+      "regular": 0.3
+    }
+  },
+  "admin-minor": {
+    "0-500": {
+      "high_speed": 0,
+      "speed": 0.5,
+      "hasty": 0.35,
+      "regular": 0.15
+    },
+    "501-10000": {
+      "high_speed": 0,
+      "speed": 0,
+      "hasty": 0.4,
+      "regular": 0.6
+    }
+  },
+  "minor-minor": {
+    "0-10000": {
+      "high_speed": 0,
+      "speed": 0,
+      "hasty": 0.3,
+      "regular": 0.7
+    }
+  }
+}

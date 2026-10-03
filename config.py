@@ -21,5 +21,7 @@ CARD_SYSTEMS_FILE = "data/bank_card/payment_systems.json"
 
 CITIES_FILE = "data/cities/cities.json"
 
+TRAINS_TYPES_PROBS_FILE = "data/trains/trains_types_probabilities.json"
+TRAINS_SUBTYPES_PROBS_FILE = "data/trains/trains_subtypes_probabilities.json"
 
 ROW_AMOUNT = 10

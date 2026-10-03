@@ -7,8 +7,8 @@ class RoadTime:
 
     def __init__(
         self,
-        departure_time: datetime = datetime(0, 0, 0),
-        arrival_time: datetime = datetime(0, 0, 0)
+        departure_time: datetime = datetime.now(),
+        arrival_time: datetime = datetime.now()
     ):
         self.departure_time = departure_time
         self.arrival_time = arrival_time

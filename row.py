@@ -1,15 +1,10 @@
-from route import Route
-from route_time import RouteTime
-from train_data import TrainData
-
-from datetime import datetime
+from departure_data import DepartureData
 
 class Row:
     name: str
     passport_number: str
-    route: Route
-    route_time: RouteTime
-    train_data: TrainData
+    dep_data: DepartureData
+    wagon_and_place: str
     cost: int
     card_number: str
 
@@ -17,12 +12,12 @@ class Row:
         return (
                 self.name,
                 self.passport_number,
-                self.route.departure_city,
-                self.route.arrival_city,
-                self.route_time.departure_time,
-                self.route_time.arrival_time,
-                self.train_data.train_number,
-                self.train_data.get_place_number(),
+                self.dep_data.route.departure_city,
+                self.dep_data.route.arrival_city,
+                self.dep_data.road_time.departure_time,
+                self.dep_data.road_time.arrival_time,
+                self.dep_data.train_number,
+                self.wagon_and_place,
                 self.cost,
                 self.card_number
         )
