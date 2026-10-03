@@ -30,4 +30,4 @@ WAGONS_NUMBERS_FILE = "data/trains/trains_wagons_numbers.json"
 WAGONS_SEATS_FILE = "data/trains/trains_wagons_seats.json"
 WAGONS_COSTS_FILE = "data/trains/trains_wagons_costs.json"
 
-ROW_AMOUNT = 10
+ROW_AMOUNT = 50_000 

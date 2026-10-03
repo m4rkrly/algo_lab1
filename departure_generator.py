@@ -141,10 +141,10 @@ class DepartureGenerator:
             limit = str_limit.split("-")
             limit = list(map(int, limit))
 
-            if limit[0] <= distance <= limit[1]:
+            if limit[0] <= int(distance) <= limit[1]:
                 types_probs = probs
                 break
-
+            
         train_type = choices(list(types_probs.keys()), weights = list(types_probs.values()), k=1)[0]
 
         subtype_probs: dict[str, float] = self.data_holder.TRAINS_SUBTYPES_PROBS[route_case][train_type]
