@@ -23,5 +23,6 @@ CITIES_FILE = "data/cities/cities.json"
 
 TRAINS_TYPES_PROBS_FILE = "data/trains/trains_types_probabilities.json"
 TRAINS_SUBTYPES_PROBS_FILE = "data/trains/trains_subtypes_probabilities.json"
+TRAINS_NUMBERS_FILE = "data/trains/trains_numbers.json"
 
 ROW_AMOUNT = 10

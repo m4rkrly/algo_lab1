@@ -53,8 +53,9 @@ class DataHolder:
         with open(TRAINS_SUBTYPES_PROBS_FILE, encoding = "utf-8") as file:
             self.TRAINS_SUBTYPES_PROBS = load(file)
 
+        with open(TRAINS_NUMBERS_FILE, encoding = "utf-8") as file:
+            self.TRAINS_NUMBERS = load(file)
+
+        self.TRAINS_LETTERS = ("А", "Б", "В", "Г", "Д", "E", "Ж", "И", "Й", "К", "М", "Н", "О", "С", "У", "Ч", "Э", "Я")
         self.DISTANCE_COEFFICITENT = 111.1
-
-    
-
-
+        self.SEASONAL_PROB = {"regular":0.7, "seasonal":0.3}

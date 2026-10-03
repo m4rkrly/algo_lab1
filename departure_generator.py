@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from random import choice, choices
+from random import choice, choices, randint
 from re import sub
 
 from data_holder import DataHolder
@@ -33,14 +33,13 @@ class DepartureGenerator:
             cur_departure.route
         )
 
-        cur_departure.road_time = RoadTime(datetime.now() + timedelta(days=1))
-        cur_departure.train_number = "001A"
-        return cur_departure
-        
         # (4) Сгенерировать номер рейса
         cur_departure.train_number = self.__generate_route_number(
             cur_departure.train_type
         )
+
+        cur_departure.road_time = RoadTime(datetime.now() + timedelta(days=1))
+        return cur_departure
 
         # (5) Узнать ограничения по времени из DepartureManager, если они есть
         time_limits = self.dep_manager.get_occupied_time(cur_departure.train_number)
@@ -132,13 +131,22 @@ class DepartureGenerator:
         subtype_probs: dict[str, float] = self.data_holder.TRAINS_SUBTYPES_PROBS[route_case][train_type]
         train_subtype = choices(list(subtype_probs.keys()), weights= list(subtype_probs.values()), k=1)[0]
         
-        print(train_type, train_subtype)
         return (train_type, train_subtype)
             
 
     def __generate_route_number(self, train_type: str) -> str:
-        # Здесь сделать выбор случайного номера и буквы по типу поезда
-        raise NotImplementedError
+        if train_type in ("regular", "hasty"):
+            chosen_type = choices(list(self.data_holder.SEASONAL_PROB.keys()), weights = list(self.data_holder.SEASONAL_PROB.values()), k = 1)[0]
+        else:
+            chosen_type = "regular"
+
+        train_number_limits: list[int] = self.data_holder.TRAINS_NUMBERS[train_type][chosen_type]
+
+        chosen_number = randint(train_number_limits[0], train_number_limits[1])
+        chosen_number = str(chosen_number).zfill(3)
+        chosen_letter = choice(self.data_holder.TRAINS_LETTERS) 
+
+        return f"{chosen_number}{chosen_letter}"
 
     def __calculate_time_limit(self, train_type: str, road_time: RoadTime) -> RoadTime:
         # Здесь высчитывать полное время занятости рейса

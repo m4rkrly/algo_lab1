@@ -1,0 +1,17 @@
+{
+  "high_speed":{
+    "regular":[751, 788]
+  },
+  "speed":{
+    "regular":[701, 750]
+  },
+  "regular":{
+    "regular":[301, 450],
+    "seasonal":[451, 598]
+  },
+  "hasty":{
+    "regular":[1, 150],
+    "seasonal":[151, 298]
+     
+  }
+}
