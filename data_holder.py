@@ -72,5 +72,22 @@ class DataHolder:
             "hasty":timedelta(hours = 3),
             "regular":timedelta(hours = 3)
         }
+        self.TRAINS_COSTS = {
+            "high_speed":20,
+            "speed":14,
+            "hasty":14,
+            "regular":10
+        }
         self.CURRENT_TIME = datetime.now()
+        
+        with open(WAGONS_FILE, encoding = "utf-8") as file:
+            self.WAGONS = load(file)
 
+        with open(WAGONS_NUMBERS_FILE, encoding = "utf-8") as file:
+            self.WAGONS_NUMBERS = load(file)
+
+        with open(WAGONS_SEATS_FILE, encoding = "utf-8") as file:
+            self.WAGONS_SEATS = load(file)
+
+        with open(WAGONS_COSTS_FILE, encoding = "utf-8") as file:
+            self.WAGONS_COSTS = load(file)

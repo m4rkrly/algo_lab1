@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 from random import choice, choices, randint
 
 from data_holder import DataHolder

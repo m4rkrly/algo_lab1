@@ -25,4 +25,9 @@ TRAINS_TYPES_PROBS_FILE = "data/trains/trains_types_probabilities.json"
 TRAINS_SUBTYPES_PROBS_FILE = "data/trains/trains_subtypes_probabilities.json"
 TRAINS_NUMBERS_FILE = "data/trains/trains_numbers.json"
 
+WAGONS_FILE = "data/trains/trains_wagons_probabilities.json"
+WAGONS_NUMBERS_FILE = "data/trains/trains_wagons_numbers.json"
+WAGONS_SEATS_FILE = "data/trains/trains_wagons_seats.json"
+WAGONS_COSTS_FILE = "data/trains/trains_wagons_costs.json"
+
 ROW_AMOUNT = 10

@@ -1,6 +1,6 @@
 from datetime import datetime
 from config import *
-from random import choice, randint
+from random import choice, choices, randint
 
 from data_holder import DataHolder
 from departure_data import DepartureData
@@ -12,6 +12,7 @@ from row import Row
 
 class RowGenerator:
     cur_row: Row
+    wagon_type: str
     data_holder: DataHolder
     card_gen: CardGenerator
     dep_gen: DepartureGenerator
@@ -64,22 +65,53 @@ class RowGenerator:
                 self.passports.add(passport_number)
                 return passport_number
 
-    def __generate_cost(self, distance: float) -> int:
-        cost = int(distance * 1000)
+    def __generate_wagon_and_place(self, train_subtype: str) -> str:
+        wagon_types = self.data_holder.WAGONS[train_subtype]
+        self.wagon_type = choices(
+            list(wagon_types.keys()),
+            weights = list(wagon_types.values()),
+            k = 1
+        )[0]
+
+        if self.data_holder.WAGONS_NUMBERS.get(train_subtype) is not None:
+            wagon_number = choice(self.data_holder.WAGONS_NUMBERS[train_subtype])
+        else:
+            wagon_number = randint(1, 20)
+       
+        max_seats = int()
+        if self.wagon_type == "1Р" and train_subtype == "sapsan":
+            max_seats = self.data_holder.WAGONS_SEATS[f"{train_subtype}_1Р"]
+        else:
+            max_seats = self.data_holder.WAGONS_SEATS[self.wagon_type]
+
+        seat_number = randint(1, max_seats)
+        return f"{wagon_number}-{seat_number}"
+
+
+    def __generate_cost(self, distance: float, train_type: str, train_subtype: str, wagon_type: str) -> int:
+        train_class = self.data_holder.TRAINS_COSTS[train_type]
+        cost = int(distance * train_class * self.data_holder.WAGONS_COSTS[train_subtype][wagon_type])
         return cost
 
     def generate_row(self) -> Row:
         self.cur_row = Row()
-
-        self.cur_row.wagon_and_place = "3-12"
 
         self.cur_row.name = self.__generate_name()
         self.cur_row.passport_number = self.__generate_passport()
         
         self.cur_row.dep_data = self.dep_gen.generate_departure()
 
+        self.cur_row.wagon_and_place = self.__generate_wagon_and_place(
+            self.cur_row.dep_data.train_subtype
+        )
+
         self.cur_row.card_number = self.card_gen.generate_card(self.data_holder)
-        self.cur_row.cost = self.__generate_cost(self.cur_row.dep_data.route.distance)
+        self.cur_row.cost = self.__generate_cost(
+            self.cur_row.dep_data.route.distance,
+            self.cur_row.dep_data.train_type,
+            self.cur_row.dep_data.train_subtype,
+            self.wagon_type
+        )
         
         return self.cur_row
 

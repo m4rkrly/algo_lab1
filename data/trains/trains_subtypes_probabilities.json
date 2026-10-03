@@ -9,8 +9,8 @@
       "finist":0.4
     },
     "hasty":{
-      "regular":0.5,
-      "branded":0.5
+      "hasty_regular":0.5,
+      "hasty_branded":0.5
     },
     "regular":{
       "regular":1
@@ -27,8 +27,8 @@
       "finist":0.3
     },
     "hasty":{
-      "regular":0.7,
-      "branded":0.3
+      "hasty_regular":0.7,
+      "hasty_branded":0.3
     },
     "regular":{
       "regular":1
@@ -45,8 +45,8 @@
       "finist":0.2
     },
     "hasty":{
-      "regular":0.8,
-      "branded":0.2
+      "hasty_regular":0.8,
+      "hasty_branded":0.2
     },
     "regular":{
       "regular":1
@@ -63,8 +63,8 @@
       "finist":0
     },
     "hasty":{
-      "regular":1,
-      "branded":0
+      "hasty_regular":1,
+      "hasty_branded":0
     },
     "regular":{
       "regular":1
