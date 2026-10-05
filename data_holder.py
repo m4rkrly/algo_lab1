@@ -70,10 +70,10 @@ class DataHolder:
             "regular":timedelta(hours = 3)
         }
         self.TRAINS_COSTS = {
-            "high_speed":20,
-            "speed":14,
-            "hasty":14,
-            "regular":10
+            "high_speed":8,
+            "speed":7,
+            "hasty":6,
+            "regular":4
         }
         self.CURRENT_TIME = datetime.now()
         

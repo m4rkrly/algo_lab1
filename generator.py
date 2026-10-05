@@ -74,7 +74,7 @@ class RowGenerator:
         )[0]
 
         if self.data_holder.WAGONS_NUMBERS.get(train_subtype) is not None:
-            wagon_number = choice(self.data_holder.WAGONS_NUMBERS[train_subtype])
+            wagon_number = choice(self.data_holder.WAGONS_NUMBERS[train_subtype][self.wagon_type])
         else:
             wagon_number = randint(1, 20)
        
@@ -90,7 +90,12 @@ class RowGenerator:
 
     def __generate_cost(self, distance: float, train_type: str, train_subtype: str, wagon_type: str) -> int:
         train_class = self.data_holder.TRAINS_COSTS[train_type]
-        cost = int(distance * train_class * self.data_holder.WAGONS_COSTS[train_subtype][wagon_type])
+        wagon_class = self.data_holder.WAGONS_COSTS[train_subtype][wagon_type]
+        cost = int(distance * train_class * wagon_class)
+        if cost < 60:
+            # Приблизительная минимальная цена на проезд в РЖД
+            cost = 60
+
         return cost
 
     def generate_row(self) -> Row:

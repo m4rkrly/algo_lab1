@@ -1212,18 +1212,6 @@
     "population_proper": "178803"
   },
   {
-    "city": "Norilsk",
-    "ru_name": "Норильск",
-    "lat": "69.3333",
-    "lng": "88.2167",
-    "country": "Russia",
-    "iso2": "RU",
-    "admin_name": "Krasnoyarskiy Kray",
-    "capital": "minor",
-    "population": "175773",
-    "population_proper": "175773"
-  },
-  {
     "city": "Prokopyevsk",
     "ru_name": "Прокопьевск",
     "lat": "53.8833",

@@ -97,8 +97,8 @@ class DepartureGenerator:
 
 
     def __generate_time(self, train_type: str, distance: float, time_limits: list[RoadTime]) -> RoadTime:
-        # Время пути выражается в часах 
-        time_in_way = timedelta(hours = distance / self.data_holder.TRAINS_SPEEDS[train_type])
+        # Время пути выражается в секундах в целях 
+        time_in_way = timedelta(seconds = (distance / self.data_holder.TRAINS_SPEEDS[train_type])*3600)
 
         previous_time = self.data_holder.CURRENT_TIME
         free_times = []
