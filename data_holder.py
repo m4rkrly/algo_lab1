@@ -40,9 +40,6 @@ class DataHolder:
 
         with open(CARD_SYSTEMS_FILE, encoding = "utf-8") as file:
             self.SYSTEMS = load(file)
-
-        self.CUSTOM_BANKS_PROBS = {}
-        self.CUSTOM_SYSTEMS_PROBS = {"MIR":0.2, "AmEx":0.2, "Visa":0.2, "Mastercard":0.2, "UnionPay":0.2}
         
         # Города, расстояния и проч.
         with open(CITIES_FILE, encoding = "utf-8") as file:
@@ -91,3 +88,8 @@ class DataHolder:
 
         with open(WAGONS_COSTS_FILE, encoding = "utf-8") as file:
             self.WAGONS_COSTS = load(file)
+
+    def init_probs(self, custom_banks_probs: dict[str, float], custom_systems_probs: dict[str, float]):
+        self.CUSTOM_BANKS_PROBS = custom_banks_probs
+        self.CUSTOM_SYSTEMS_PROBS = custom_systems_probs
+
