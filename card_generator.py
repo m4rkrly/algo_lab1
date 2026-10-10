@@ -1,4 +1,3 @@
-from os import WTERMSIG, system
 from random import choice, choices, randint
 
 from data_holder import DataHolder

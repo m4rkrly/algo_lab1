@@ -8,20 +8,20 @@ from road_time import RoadTime
 from route import Route
 
 class DepartureGenerator:
-    data_holder: DataHolder
-    dep_manager: DepartureManager
+    _data_holder: DataHolder
+    _dep_manager: DepartureManager
 
 
     def __init__(self, dh: DataHolder):
-        self.data_holder = dh
-        self.dep_manager = DepartureManager()
+        self._data_holder = dh
+        self._dep_manager = DepartureManager()
 
 
     def generate_departure(self) -> DepartureData:
         cur_departure = DepartureData()
 
         # (1) Подкинуть монетку и взять/не брать обратный рейс
-        # random_back = self.dep_manager.get_random_back()
+        # random_back = self._dep_manager.get_random_back()
         # if random_back != None: return random_back
 
         # (2) Сгенерировать маршрут
@@ -38,7 +38,7 @@ class DepartureGenerator:
         )
 
         # (5) Узнать ограничения по времени из DepartureManager, если они есть
-        time_limits = self.dep_manager.get_occupied_time(cur_departure.train_number)
+        time_limits = self._dep_manager.get_occupied_time(cur_departure.train_number)
 
         # (6) Сгенерировать время отправления и прибытия
         cur_departure.road_time = self.__generate_time(
@@ -51,31 +51,31 @@ class DepartureGenerator:
         # back_departure = self.__build_back(cur_departure)
         #
         # # (8) Проверить обратный маршрут на пересеченеи
-        # intersection = self.dep_manager.find_intersection(
+        # intersection = self._dep_manager.find_intersection(
         #     back_departure.train_number,
         #     back_departure.road_time
         # )
         # if intersection is None:
-        #     self.dep_manager.add_to_backs(back_departure)
+        #     self._dep_manager.add_to_backs(back_departure)
         #
         #     # (8.1) Не забыть учесть то, что обратный маршрут тоже что-то да занимает
-        #     self.dep_manager.add_time_to_occupied(
+        #     self._dep_manager.add_time_to_occupied(
         #         back_departure.train_number,
         #         RoadTime(back_departure.road_time.departure_time, back_departure.road_time.arrival_time)
         #     )
 
         # (9) Добавить ограничения по времени в архив
         time_limit = self.__calculate_time_limit(cur_departure.train_type, cur_departure.road_time)
-        self.dep_manager.add_occupied_time(cur_departure.train_number, time_limit)
+        self._dep_manager.add_occupied_time(cur_departure.train_number, time_limit)
 
         return cur_departure
 
 
     def __generate_route(self) -> Route:
-        departure_city = choice(self.data_holder.CITIES)
+        departure_city = choice(self._data_holder.CITIES)
         arrival_city = departure_city
         while departure_city == arrival_city:
-            arrival_city = choice(self.data_holder.CITIES)
+            arrival_city = choice(self._data_holder.CITIES)
        
         arr_city_status = arrival_city["capital"] if arrival_city["capital"] != "" else "minor"
         dep_city_status = departure_city["capital"] if departure_city["capital"] != "" else "minor"
@@ -85,7 +85,7 @@ class DepartureGenerator:
             float(departure_city["lng"]) - float(arrival_city["lng"])
         )
         
-        distance = ((delta[0] * self.data_holder.DISTANCE_COEFFICITENT)**2 + (delta[0] * self.data_holder.DISTANCE_COEFFICITENT)**2)**(1/2)
+        distance = ((delta[0] * self._data_holder.DISTANCE_COEFFICITENT)**2 + (delta[0] * self._data_holder.DISTANCE_COEFFICITENT)**2)**(1/2)
         
         return Route(
             departure_city["ru_name"],
@@ -98,9 +98,9 @@ class DepartureGenerator:
 
     def __generate_time(self, train_type: str, distance: float, time_limits: list[RoadTime]) -> RoadTime:
         # Время пути выражается в секундах в целях 
-        time_in_way = timedelta(seconds = (distance / self.data_holder.TRAINS_SPEEDS[train_type])*3600)
+        time_in_way = timedelta(seconds = (distance / self._data_holder.TRAINS_SPEEDS[train_type])*3600)
 
-        previous_time = self.data_holder.CURRENT_TIME
+        previous_time = self._data_holder.CURRENT_TIME
         free_times = []
         free_times_lengths = []
         for limit in time_limits:
@@ -134,7 +134,7 @@ class DepartureGenerator:
         else:
             route_case = "minor-minor"
 
-        probabilities: dict[str, dict[str, float]] = self.data_holder.TRAINS_TYPES_PROBS[route_case]
+        probabilities: dict[str, dict[str, float]] = self._data_holder.TRAINS_TYPES_PROBS[route_case]
 
         types_probs = dict()
         for str_limit, probs in probabilities.items():
@@ -147,7 +147,7 @@ class DepartureGenerator:
             
         train_type = choices(list(types_probs.keys()), weights = list(types_probs.values()), k=1)[0]
 
-        subtype_probs: dict[str, float] = self.data_holder.TRAINS_SUBTYPES_PROBS[route_case][train_type]
+        subtype_probs: dict[str, float] = self._data_holder.TRAINS_SUBTYPES_PROBS[route_case][train_type]
         train_subtype = choices(list(subtype_probs.keys()), weights= list(subtype_probs.values()), k=1)[0]
         
         return (train_type, train_subtype)
@@ -155,21 +155,21 @@ class DepartureGenerator:
 
     def __generate_route_number(self, train_type: str) -> str:
         if train_type in ("regular", "hasty"):
-            chosen_type = choices(list(self.data_holder.SEASONAL_PROB.keys()), weights = list(self.data_holder.SEASONAL_PROB.values()), k = 1)[0]
+            chosen_type = choices(list(self._data_holder.SEASONAL_PROB.keys()), weights = list(self._data_holder.SEASONAL_PROB.values()), k = 1)[0]
         else:
             chosen_type = "regular"
 
-        train_number_limits: list[int] = self.data_holder.TRAINS_NUMBERS[train_type][chosen_type]
+        train_number_limits: list[int] = self._data_holder.TRAINS_NUMBERS[train_type][chosen_type]
 
         chosen_number = randint(train_number_limits[0], train_number_limits[1])
         chosen_number = str(chosen_number).zfill(3)
-        chosen_letter = choice(self.data_holder.TRAINS_LETTERS) 
+        chosen_letter = choice(self._data_holder.TRAINS_LETTERS) 
 
         return f"{chosen_number}{chosen_letter}"
 
     def __calculate_time_limit(self, train_type: str, road_time: RoadTime) -> RoadTime:
         time_in_way = road_time.arrival_time - road_time.departure_time
-        occupied_time = road_time.departure_time + 2*time_in_way + 2*self.data_holder.TRAINS_BREAKS[train_type]
+        occupied_time = road_time.departure_time + 2*time_in_way + 2*self._data_holder.TRAINS_BREAKS[train_type]
         return RoadTime(road_time.departure_time, occupied_time)
         
 
