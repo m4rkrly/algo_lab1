@@ -95,9 +95,7 @@ class DepartureGenerator:
             distance
         )
 
-
     def __generate_time(self, train_type: str, distance: float, time_limits: list[RoadTime]) -> RoadTime:
-        # Время пути выражается в секундах в целях 
         time_in_way = timedelta(seconds = (distance / self._data_holder.TRAINS_SPEEDS[train_type])*3600)
 
         previous_time = self._data_holder.CURRENT_TIME
@@ -105,8 +103,8 @@ class DepartureGenerator:
         free_times_lengths = []
         for limit in time_limits:
             free_times.append((previous_time, limit.departure_time))
-            previous_time = limit.arrival_time
             free_times_lengths.append(limit.departure_time - previous_time)
+            previous_time = limit.arrival_time
 
         time_window = tuple()
         for i in range(len(free_times)):
@@ -118,10 +116,11 @@ class DepartureGenerator:
             time_window = (previous_time, timedelta(days = 1))
 
         seconds = time_window[1].total_seconds()
-        dep_time = time_window[0] + timedelta(seconds=randint(3600, int(seconds)))
+        dep_time = time_window[0] + timedelta(seconds=randint(3600, int(seconds) - 3600))
         arr_time = dep_time + time_in_way        
 
         return RoadTime(dep_time, arr_time)
+
 
     def __generate_train_type(self, route: Route) -> tuple[str, str]:
         distance = route.distance
@@ -152,7 +151,6 @@ class DepartureGenerator:
         
         return (train_type, train_subtype)
             
-
     def __generate_route_number(self, train_type: str) -> str:
         if train_type in ("regular", "hasty"):
             chosen_type = choices(list(self._data_holder.SEASONAL_PROB.keys()), weights = list(self._data_holder.SEASONAL_PROB.values()), k = 1)[0]

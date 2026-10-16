@@ -4,6 +4,7 @@ from config import *
 
 class DataHolder:
     def __init__(self):
+        self.HEADER = ("ФИО", "Паспортные данные", "Пункт отправления", "Пункт назначения", "Время отправления", "Время прибытия", "Номер рейса", "Номер вагона и места", "Стоимость", "Банковская карта")
         # Имена, фамилии, отчества
         with open(NAMES_PATH + NAMES_FILES["man"]["names"], encoding = 'utf-8') as file:
             self.NAMES_MAN = load(file)
